@@ -4,88 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Doe - Data Science Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #1a237e;
+            --secondary-color: #3949ab;
+            --text-color: #333;
+            --background-color: #f5f5f5;
+            --card-background: #ffffff;
+        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: var(--text-color);
+            background-color: var(--background-color);
         }
         header, nav, main, footer {
             padding: 20px;
         }
         header {
-            background-color: #2c3e50;
+            background-color: var(--primary-color);
             color: white;
             text-align: center;
+            padding: 60px 20px;
+        }
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2em;
+            opacity: 0.8;
         }
         nav {
-            background-color: #34495e;
+            background-color: var(--secondary-color);
             color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav ul {
             list-style-type: none;
             padding: 0;
             display: flex;
             justify-content: center;
+            margin: 0;
         }
         nav ul li {
-            margin: 0 10px;
+            margin: 0 15px;
         }
         nav ul li a {
             text-decoration: none;
             color: white;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
         section {
-            margin-bottom: 30px;
+            margin-bottom: 50px;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-size: 2em;
+            margin-bottom: 20px;
         }
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
         }
         .project {
-            background-color: #ecf0f1;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            background-color: var(--card-background);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .project:hover {
             transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
         .project a {
             text-decoration: none;
-            color: #333;
+            color: var(--text-color);
         }
         .project h3 {
             margin-top: 0;
-            color: #2c3e50;
+            color: var(--secondary-color);
+            font-size: 1.4em;
         }
         .skills-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 12px;
         }
         .skill {
-            background-color: #3498db;
+            background-color: var(--secondary-color);
             color: white;
-            padding: 5px 10px;
-            border-radius: 15px;
+            padding: 8px 16px;
+            border-radius: 20px;
             font-size: 0.9em;
+            transition: background-color 0.3s ease;
+        }
+        .skill:hover {
+            background-color: var(--primary-color);
+        }
+        .education-item {
+            margin-bottom: 20px;
+        }
+        .education-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 5px;
         }
         footer {
-            background-color: #2c3e50;
+            background-color: var(--primary-color);
             color: white;
             text-align: center;
+            padding: 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>John Doe</h1>
-        <p>Data Scientist</p>
+        <p>Data Scientist | Machine Learning Engineer</p>
     </header>
 
     <nav>
@@ -100,7 +154,7 @@
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <p>I'm a passionate data scientist with expertise in machine learning and statistical analysis. I love turning complex data into actionable insights.</p>
+            <p>I'm a passionate data scientist with expertise in machine learning and statistical analysis. With a keen eye for patterns and a drive for innovation, I specialize in turning complex data into actionable insights. My work spans various industries, from finance to healthcare, where I've consistently delivered impactful solutions to challenging problems.</p>
         </section>
 
         <section id="projects">
@@ -109,25 +163,25 @@
                 <div class="project">
                     <a href="https://github.com/johndoe/customer-churn-prediction" target="_blank">
                         <h3>Customer Churn Prediction</h3>
-                        <p>Developed a machine learning model to predict customer churn for a telecom company, improving retention strategies.</p>
+                        <p>Developed a machine learning model to predict customer churn for a telecom company, improving retention strategies and reducing churn by 25%.</p>
                     </a>
                 </div>
                 <div class="project">
                     <a href="https://github.com/johndoe/stock-market-analysis" target="_blank">
                         <h3>Stock Market Analysis</h3>
-                        <p>Created a time series analysis tool to forecast stock prices using historical data and sentiment analysis.</p>
+                        <p>Created a time series analysis tool to forecast stock prices using historical data and sentiment analysis, achieving 85% accuracy in short-term predictions.</p>
                     </a>
                 </div>
                 <div class="project">
                     <a href="https://github.com/johndoe/image-classification" target="_blank">
-                        <h3>Image Classification</h3>
-                        <p>Built a deep learning model for image classification using convolutional neural networks (CNNs) and transfer learning.</p>
+                        <h3>Medical Image Classification</h3>
+                        <p>Built a deep learning model for classifying medical images, assisting in early disease detection with 92% accuracy across multiple conditions.</p>
                     </a>
                 </div>
                 <div class="project">
                     <a href="https://github.com/johndoe/nlp-sentiment-analysis" target="_blank">
                         <h3>NLP Sentiment Analysis</h3>
-                        <p>Developed a natural language processing model to analyze sentiment in customer reviews for a major e-commerce platform.</p>
+                        <p>Developed a natural language processing model to analyze sentiment in customer reviews for a major e-commerce platform, improving product recommendations.</p>
                     </a>
                 </div>
             </div>
@@ -139,26 +193,30 @@
                 <span class="skill">Python</span>
                 <span class="skill">R</span>
                 <span class="skill">Machine Learning</span>
+                <span class="skill">Deep Learning</span>
                 <span class="skill">Data Visualization</span>
                 <span class="skill">SQL</span>
                 <span class="skill">Tableau</span>
-                <span class="skill">Deep Learning</span>
+                <span class="skill">TensorFlow</span>
+                <span class="skill">PyTorch</span>
                 <span class="skill">Statistical Analysis</span>
+                <span class="skill">Big Data</span>
+                <span class="skill">Apache Spark</span>
             </div>
         </section>
 
         <section id="education">
             <h2>Education</h2>
-            <ul>
-                <li>
-                    <h3>MSc in Data Science</h3>
-                    <p>University of Data, 2020-2022</p>
-                </li>
-                <li>
-                    <h3>BSc in Computer Science</h3>
-                    <p>Tech University, 2016-2020</p>
-                </li>
-            </ul>
+            <div class="education-item">
+                <h3>MSc in Data Science</h3>
+                <p>University of Data Science, 2020-2022</p>
+                <p>Thesis: "Explainable AI in Healthcare: Improving Diagnostic Accuracy and Interpretability"</p>
+            </div>
+            <div class="education-item">
+                <h3>BSc in Computer Science</h3>
+                <p>Tech University, 2016-2020</p>
+                <p>Minor in Statistics | Graduated with Honors</p>
+            </div>
         </section>
     </main>
 
