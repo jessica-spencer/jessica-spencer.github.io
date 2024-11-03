@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jessica Spencer - Data Science Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary-color: #1a237e;
@@ -23,21 +24,6 @@
         }
         header, nav, main, footer {
             padding: 20px;
-        }
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-        header p {
-            font-size: 1.2em;
-            opacity: 0.8;
         }
         header {
             background-color: var(--primary-color);
@@ -82,7 +68,6 @@
         .social-links a:hover {
             opacity: 0.8;
         }
-       
         nav {
             background-color: var(--secondary-color);
             color: white;
@@ -183,13 +168,13 @@
 <body>
     <header>
         <div class="profile-container">
-            <img src="/placeholder.svg?height=200&width=200" alt="John Doe" class="profile-picture">
+            <img src="matterhorn_png.png" alt="Jessica Spencer" class="profile-picture">
             <h1>Jessica Spencer</h1>
             <p>Data Scientist | Machine Learning Engineer</p>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/johndoe" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.kaggle.com/johndoe" target="_blank" aria-label="Kaggle"><i class="fab fa-kaggle"></i></a>
-                <a href="https://github.com/johndoe" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jessicaspencer" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.kaggle.com/jessicaspencer" target="_blank" aria-label="Kaggle"><i class="fab fa-kaggle"></i></a>
+                <a href="https://github.com/jessicaspencer" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </header>
@@ -213,28 +198,27 @@
             <h2>Projects</h2>
             <div class="projects-grid">
                 <div class="project">
-                    <a href="https://github.com/johndoe/customer-churn-prediction" target="_blank">
+                    <a href="https://github.com/jessicaspencer/customer-churn-prediction" target="_blank">
                         <h3>Customer Churn Prediction</h3>
                         <p>Developed a machine learning model to predict customer churn for a telecom company, improving retention strategies and reducing churn by 25%.</p>
                     </a>
                 </div>
                 <div class="project">
-                    <a href="https://github.com/johndoe/stock-market-analysis" target="_blank">
+                    <a href="https://github.com/jessicaspencer/stock-market-analysis" target="_blank">
                         <h3>Stock Market Analysis</h3>
                         <p>Created a time series analysis tool to forecast stock prices using historical data and sentiment analysis, achieving 85% accuracy in short-term predictions.</p>
                     </a>
                 </div>
                 <div class="project">
-                    <a href="https://github.com/johndoe/image-classification" target="_blank">
+                    <a href="https://github.com/jessicaspencer/gavi-vaccination-impacts" target="_blank">
                         <h3>Gavi Vaccination Impacts: A Propensity Score Study</h3>
-                        <p>The mission of the Global Alliance for Vaccines and Immunisation (aka the GaviAlliance) is to increase immunization rates  by providing bulk vaccinations for countries with less than $1000 gross net income. A former causal analysis from a 2019 paper used regression discontinuity design, and found little impact on mortality rates. I reproduced this analysis using a doubly-robust propensity score design. The sample size was small, and a doubly robust design was used because balance was not achieved in the matching step. Consistent near-zero and very uncertain results were found, with little power.
-                        </p>
+                        <p>The Gavi Alliance provides vaccines to countries with <$1000 GNI. A 2019 study using regression discontinuity found minimal impact of the alliance on mortality. My reanalysis using doubly-robust propensity scoring (due to poor matching balance) showed similar null results, though the small sample limited statistical power.</p>
                     </a>
                 </div>
                 <div class="project">
-                    <a href="https://www.kaggle.com/code/uwu1234/time-series-analysis-usconstruction-households" target="_blank">
+                    <a href="https://www.kaggle.com/code/jessicaspencer/time-series-analysis-usconstruction-households" target="_blank">
                         <h3>Time Series Causal Analysis</h3>
-                        <p>Granger causality analysis of the relationship between cost of residential construction and number of households in the US over time. Although a small dataset, I found that construction cost and number of households in the US are strongly related. This makes sense, because as the number of households increases, so does the opportunity for construction.</p>
+                        <p>Time series analysis and Granger causality testing revealed a strong relationship between US residential construction costs and household numbers, likely due to increased construction opportunities as households grow</p>
                     </a>
                 </div>
             </div>
@@ -258,7 +242,7 @@
             <div class="education-item">
                 <h3>Masters of Science in Applied Statistics for Social Science Research</h3>
                 <p>New York University, 2018-2020</p>
-                <p>I learned advanced quantitative research techniques and applied them to critical policy issues across the social, behavioral, and health sciences, preparing for a career as an applied statistician or data scientist</p>
+                <p>I learned advanced quantitative research techniques and applied them to critical policy issues across the social, behavioral, and health sciences, preparing for a career as an applied statistician or data scientist.</p>
             </div>
             <div class="education-item">
                 <h3>BA in Computer Science and American Studies: Policy, and Society</h3>
