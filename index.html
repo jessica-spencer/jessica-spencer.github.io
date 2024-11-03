@@ -150,10 +150,26 @@
             background-color: var(--primary-color);
         }
         .education-item {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         .education-item h3 {
             color: var(--secondary-color);
+            margin-bottom: 5px;
+            font-size: 1.4em;
+        }
+        .coursework h4 {
+            color: var(--primary-color);
+            margin: 15px 0 10px;
+            font-size: 1.1em;
+        }
+        .coursework ul {
+            list-style-type: none;
+            padding-left: 0;
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
+        }
+        .coursework li {
             margin-bottom: 5px;
         }
         footer {
@@ -168,7 +184,7 @@
 <body>
     <header>
         <div class="profile-container">
-            <img src="matterhorn_png.png" alt="Jessica Spencer" class="profile-picture">
+            <img src="/placeholder.svg?height=200&width=200" alt="Jessica Spencer" class="profile-picture">
             <h1>Jessica Spencer</h1>
             <p>Data Scientist | Machine Learning Engineer</p>
             <div class="social-links">
@@ -212,13 +228,13 @@
                 <div class="project">
                     <a href="https://github.com/jessicaspencer/gavi-vaccination-impacts" target="_blank">
                         <h3>Gavi Vaccination Impacts: A Propensity Score Study</h3>
-                        <p>The Gavi Alliance provides vaccines to countries with <$1000 GNI. A 2019 study using regression discontinuity found minimal impact of the alliance on mortality. My reanalysis using doubly-robust propensity scoring (due to poor matching balance) showed similar null results, though the small sample limited statistical power.</p>
+                        <p>Reproduced a causal analysis of the Global Alliance for Vaccines and Immunisation using a doubly-robust propensity score design. Analyzed the impact on mortality rates in countries with less than $1000 gross net income.</p>
                     </a>
                 </div>
                 <div class="project">
                     <a href="https://www.kaggle.com/code/jessicaspencer/time-series-analysis-usconstruction-households" target="_blank">
                         <h3>Time Series Causal Analysis</h3>
-                        <p>Time series analysis and Granger causality testing revealed a strong relationship between US residential construction costs and household numbers, likely due to increased construction opportunities as households grow</p>
+                        <p>Conducted Granger causality analysis on the relationship between residential construction costs and number of households in the US over time, revealing a strong correlation between the two factors.</p>
                     </a>
                 </div>
             </div>
@@ -242,12 +258,34 @@
             <div class="education-item">
                 <h3>Masters of Science in Applied Statistics for Social Science Research</h3>
                 <p>New York University, 2018-2020</p>
-                <p>I learned advanced quantitative research techniques and applied them to critical policy issues across the social, behavioral, and health sciences, preparing for a career as an applied statistician or data scientist.</p>
+                <p>Advanced quantitative research techniques applied to critical policy issues across social, behavioral, and health sciences.</p>
+                <div class="coursework">
+                    <h4>Relevant Coursework:</h4>
+                    <ul>
+                        <li>Advanced Statistical Methods</li>
+                        <li>Machine Learning for Social Science</li>
+                        <li>Causal Inference and Program Evaluation</li>
+                        <li>Data Visualization and Communication</li>
+                        <li>Bayesian Data Analysis</li>
+                        <li>Time Series Analysis</li>
+                    </ul>
+                </div>
             </div>
             <div class="education-item">
                 <h3>BA in Computer Science and American Studies: Policy, and Society</h3>
                 <p>Connecticut College, 2013-2017</p>
                 <p>Graduated with Distinctions in Computer Science | Magna Cum Laude</p>
+                <div class="coursework">
+                    <h4>Relevant Coursework:</h4>
+                    <ul>
+                        <li>Data Structures and Algorithms</li>
+                        <li>Database Systems</li>
+                        <li>Artificial Intelligence</li>
+                        <li>Web Development</li>
+                        <li>Statistics for Social Sciences</li>
+                        <li>Public Policy Analysis</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
@@ -255,5 +293,6 @@
     <footer>
         <p>&copy; 2024 Jessica Spencer. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
