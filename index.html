@@ -224,6 +224,36 @@
         .project-link:hover {
             background-color: var(--primary-color);
         }
+
+    .project-link-wrapper {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .project-link-wrapper:hover {
+        text-decoration: none;
+    }
+
+    .project-link {
+        display: inline-block;
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .project-link-wrapper:hover .project-link {
+        background-color: var(--primary-color);
+    }
+
+    /* Ensure the project content maintains its styles */
+    .project-link-wrapper .project-content h3,
+    .project-link-wrapper .project-content p {
+        color: inherit;
+    }
+
     </style>
 </head>
 <body>
@@ -258,29 +288,39 @@
             <h2>Projects</h2>
             <div class="projects-grid">
                 <div class="project">
-                    <img src="/Gavi-logo_1b.png?height=200&width=300" alt="Gavi Vaccination Impact Study" class="project-image">
-                    <div class="project-content">
-                        <h3>Gavi Vaccination Impacts: A Propensity Score Study</h3>
-                        <p>Reproduced a causal analysis of the Global Alliance for Vaccines and Immunisation using a doubly-robust propensity score design. Analyzed the impact on mortality rates in countries with less than $1000 gross net income.</p>
-                        <a href="https://github.com/jessica-spencer/Gavi-Vaccination-Coverage-Causal-Analysis" target="_blank" class="project-link">View Project</a>
-                    </div>
+                    <a href="https://github.com/jessica-spencer/Gavi-Vaccination-Coverage-Causal-Analysis" target="_blank" class="project-link-wrapper" aria-label="View Gavi Vaccination Impacts: A Propensity Score Study project">
+                        <img src="/gavi_small_logo.png?height=200&width=300" alt="Gavi Vaccination Impact Study" class="project-image">
+                        <div class="project-content">
+                            <h3>Gavi Vaccination Impacts: A Propensity Score Study</h3>
+                            <p>Reproduced a causal analysis of the Global Alliance for Vaccines and Immunisation using a doubly-robust propensity score design. Analyzed the impact on mortality rates in countries with less than $1000 gross net income.</p>
+                            <span class="project-link">View Project</span>
+                        </div>
+                    </a>
                 </div>
+
                 <div class="project">
-                    <img src="/time_Series.png?height=200&width=300" alt="Time Series Causal Analysis" class="project-image">
-                    <div class="project-content">
-                        <h3>Time Series Causal Analysis</h3>
-                        <p>Conducted Granger causality analysis on the relationship between residential construction costs and number of households in the US over time, revealing a strong correlation between the two factors.</p>
-                        <a href="https://github.com/jessica-spencer/Open-Data-Projects/tree/main/Time%20Series%20Analysis%20of%20Construction%20in%20the%20US" target="_blank" class="project-link">View Project</a>
-                    </div>
+                    <a href="https://github.com/jessica-spencer/Open-Data-Projects/tree/main/Time%20Series%20Analysis%20of%20Construction%20in%20the%20US"  target="_blank" class="project-link-wrapper" aria-label="View Time Series Causal Analysis project">
+                        <img src="/time_Series.png?height=200&width=300" alt="Time Series Causal Analysis" class="project-image">
+                        <div class="project-content">
+                            <h3>Time Series Causal Analysis</h3>
+                            <p>Conducted Granger causality analysis on the relationship between residential construction costs and number of households in the US over time, revealing a strong correlation between the two factors.</p>
+                            <span class="project-link">View Project</span>
+                        </div>
+                    </a>
                 </div>
+
+
                 <div class="project">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Unicorn Companies SQL Analysis" class="project-image">
-                    <div class="project-content">
-                        <h3>Unicorn Companies: SQL Sample</h3>
-                        <p>In this project, I produced PostgreSQL to understand which industries are producing the highest valuations and the rate at which new high-value companies are emerging.</p>
-                        <a href="https://www.datacamp.com/datalab/w/0afea4f1-f164-4a8a-936a-13acc2288263/edit" target="_blank" class="project-link">View Project</a>
-                    </div>
+                    <a href="https://www.datacamp.com/datalab/w/0afea4f1-f164-4a8a-936a-13acc2288263/edit"  target="_blank" class="project-link-wrapper" aria-label="View Unicorn Companies SQL Analysis project">
+                        <img src="/unicorn_graphic.jpg?height=200&width=300" alt="Unicorn Companies SQL Analysis" class="project-image">
+                        <div class="project-content">
+                            <h3>Unicorn Companies: SQL Analysis</h3>
+                            <p>In this project, I produced PostgreSQL to understand which industries are producing the highest valuations and the rate at which new high-value companies are emerging.</p>
+                            <span class="project-link">View Project</span>
+                        </div>
+                    </a>
                 </div>
+
             </div>
         </section>
 
