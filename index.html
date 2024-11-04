@@ -179,6 +179,51 @@
             padding: 20px;
             margin-top: 40px;
         }
+         /* Updated and new styles for the projects section */
+         .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .project {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project-content {
+            padding: 20px;
+        }
+        .project h3 {
+            margin-top: 0;
+            color: var(--secondary-color);
+            font-size: 1.4em;
+        }
+        .project p {
+            margin-bottom: 15px;
+        }
+        .project-link {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .project-link:hover {
+            background-color: var(--primary-color);
+        }
     </style>
 </head>
 <body>
@@ -209,32 +254,36 @@
             <h2>About Me</h2>
             <p>I'm a passionate data scientist with expertise in machine learning and statistical analysis. With a keen eye for patterns and a drive for innovation, I specialize in turning complex data into actionable insights. My work spans various industries, from finance to healthcare, where I've consistently delivered impactful solutions to challenging problems.</p>
         </section>
-
-       
-
         <section id="projects">
             <h2>Projects</h2>
             <div class="projects-grid">
                 <div class="project">
-                    <a href="https://github.com/jessica-spencer/Gavi-Vaccination-Coverage-Causal-Analysis" target="_blank">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Gavi Vaccination Impact Study" class="project-image">
+                    <div class="project-content">
                         <h3>Gavi Vaccination Impacts: A Propensity Score Study</h3>
                         <p>Reproduced a causal analysis of the Global Alliance for Vaccines and Immunisation using a doubly-robust propensity score design. Analyzed the impact on mortality rates in countries with less than $1000 gross net income.</p>
-                    </a>
+                        <a href="https://github.com/jessica-spencer/Gavi-Vaccination-Coverage-Causal-Analysis" target="_blank" class="project-link">View Project</a>
+                    </div>
                 </div>
                 <div class="project">
-                    <a href="https://github.com/jessica-spencer/Open-Data-Projects/tree/main/Time%20Series%20Analysis%20of%20Construction%20in%20the%20US" target="_blank">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Time Series Causal Analysis" class="project-image">
+                    <div class="project-content">
                         <h3>Time Series Causal Analysis</h3>
                         <p>Conducted Granger causality analysis on the relationship between residential construction costs and number of households in the US over time, revealing a strong correlation between the two factors.</p>
-                    </a>
+                        <a href="https://github.com/jessica-spencer/Open-Data-Projects/tree/main/Time%20Series%20Analysis%20of%20Construction%20in%20the%20US" target="_blank" class="project-link">View Project</a>
+                    </div>
                 </div>
                 <div class="project">
-                    <a href="https://www.datacamp.com/datalab/w/0afea4f1-f164-4a8a-936a-13acc2288263/edit" target="_blank">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Unicorn Companies SQL Analysis" class="project-image">
+                    <div class="project-content">
                         <h3>Unicorn Companies: SQL Sample</h3>
-                        <p>In this project, I produced PostgreSQL to understand which industries are producing the highest valuations and the rate at which new high-value companies are emerging. </p>
-                    </a>
+                        <p>In this project, I produced PostgreSQL to understand which industries are producing the highest valuations and the rate at which new high-value companies are emerging.</p>
+                        <a href="https://www.datacamp.com/datalab/w/0afea4f1-f164-4a8a-936a-13acc2288263/edit" target="_blank" class="project-link">View Project</a>
+                    </div>
                 </div>
             </div>
         </section>
+
 
         <section id="skills">
             <h2>Skills</h2>
