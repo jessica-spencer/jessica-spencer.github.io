@@ -272,6 +272,42 @@
             background-color: var(--primary-color);
         }
 
+        #skills {
+            background-color: var(--background-color);
+            padding: 40px 0;
+            margin-bottom: 50px;
+        }
+
+        .skills-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .skills-column {
+            flex: 1;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease;
+        }
+
+        .skill:hover {
+            background-color: var(--primary-color);
+        }
     </style>
 </head>
 <body>
@@ -303,36 +339,37 @@
             <p>I'm a passionate data scientist with expertise in machine learning and statistical analysis. With a keen eye for patterns and a drive for innovation, I specialize in turning complex data into actionable insights. My work spans various industries, from finance to healthcare, where I've consistently delivered impactful solutions to challenging problems.</p>
         </section>
         <section id="skills">
-            <section id="skills">
-                <h2>Skills</h2>
-                
-                <h3>Tools & Technologies</h3>
-                <div class="skills-list">
-                    <span class="skill">Python</span>
-                    <span class="skill">Pandas</span>
-                    <span class="skill">Polars</span>
-                    <span class="skill">skLearn</span>
-                    <span class="skill">statsmodel</span>
-                    <span class="skill">R</span>
-                    <span class="skill">SQL</span>
-                    <span class="skill">AWS</span>
-                    <span class="skill">SQL</span>
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skills-column">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skills-list">
+                        <span class="skill">Python</span>
+                        <span class="skill">Pandas</span>
+                        <span class="skill">Polars</span>
+                        <span class="skill">skLearn</span>
+                        <span class="skill">statsmodel</span>
+                        <span class="skill">R</span>
+                        <span class="skill">SQL</span>
+                        <span class="skill">AWS</span>
+                    </div>
                 </div>
-                
-                <h3>Statistical Analysis & Data Science</h3>
-                <div class="skills-list">
-                    <span class="skill">Machine Learning Engineering</span>
-                    <span class="skill">Big Data</span>
-                    <span class="skill">Generalized Linear Modelling</span>
-                    <span class="skill">Multi-Level Modelling</span>
-                    <span class="skill">Data Visualization & Translation</span>
-                    <span class="skill">Bayesian Regression and Analysis</span>
-                    <span class="skill">Causal Inference</span>
-                    <span class="skill">Multivariate Analysis</span>
+                <div class="skills-column">
+                    <h3>Statistical Analysis & Data Science</h3>
+                    <div class="skills-list">
+                        <span class="skill">Machine Learning Engineering</span>
+                        <span class="skill">Big Data</span>
+                        <span class="skill">Generalized Linear Modelling</span>
+                        <span class="skill">Multi-Level Modelling</span>
+                        <span class="skill">Data Visualization & Translation</span>
+                        <span class="skill">Bayesian Regression and Analysis</span>
+                        <span class="skill">Causal Inference</span>
+                        <span class="skill">Multivariate Analysis</span>
+                    </div>
                 </div>
-            </section>
+            </div>
         </section>
-        
+
         <section id="projects">
             <h2>Projects</h2>
             <div class="projects-grid">
@@ -422,9 +459,6 @@
                 </div>
             </div>
         </section>
-
-
-      
 
         <section id="education">
             <h2>Education</h2>
