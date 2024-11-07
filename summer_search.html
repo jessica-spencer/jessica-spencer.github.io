@@ -7,23 +7,25 @@
     <title>Why Does Summer Search Matter?</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.4;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
             color: #333;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #f9f9f9;
         }
         .header {
-            background-color: #FFD700;
-            padding: 24px 16px;
+            background-color: #fbb03b;
+            padding: 32px 16px;
             margin-bottom: 24px;
+            text-align: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .header h1 {
-            color: #333;
+            color: white;
             margin: 0;
-            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
         }
         .container {
             max-width: 800px;
@@ -34,18 +36,39 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         h1 {
-            color: #4A90E2;
+            color: #4a90e2;
             text-align: center;
             margin: 16px 0 24px;
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 700;
         }
         h2 {
-            color: #4A90E2;
-            font-size: 22px;
+            color: #fbb03b;
+            font-size: 20px;
             margin: 20px 0 12px;
-            border-bottom: 2px solid #4A90E2;
-            padding-bottom: 8px;
+            font-weight: bold;
+        }
+        p {
+            color: #666;
+            margin-bottom: 16px;
+        }
+        .highlight-box {
+            background-color: #4a90e2;
+            color: white;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+        .stat-highlight {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4a90e2;
+            text-align: center;
+            margin: 16px 0;
+            padding: 16px;
+            background: #f0f7ff;
+            border-radius: 8px;
         }
         .card {
             background-color: #f9f9f9;
@@ -54,26 +77,17 @@
             margin-bottom: 24px;
             border: 1px solid #e0e0e0;
         }
-        .highlight-box {
-            background-color: #4A90E2;
-            color: white;
-            padding: 16px;
-            border-radius: 8px;
-            margin: 20px 0;
+        ul {
+            padding-left: 20px;
         }
-        .stat-highlight {
-            font-size: 24px;
-            font-weight: bold;
-            color: #4A90E2;
-            text-align: center;
-            margin: 16px 0;
-            padding: 16px;
-            background: #f0f7ff;
-            border-radius: 8px;
+        ul li {
+            margin-bottom: 8px;
+            color: #555;
         }
         .chart-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
             margin: 24px 0;
             max-width: 600px;
             background-color: white;
@@ -82,14 +96,11 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .chart {
+            width: 45%;
             background: white;
             padding: 24px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        .chart text {
-            font-family: Arial, sans-serif;
-            font-size: 14px;
         }
         .chart-title {
             font-size: 16px;
@@ -99,22 +110,24 @@
         }
         @media (max-width: 600px) {
             .chart-container {
-                grid-template-columns: 1fr;
+                flex-direction: column;
+                align-items: center;
             }
-        }
-        .chart-container {
-           
+            .chart {
+                width: 100%;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>Empowering Future Leaders Through Summer Search</h1>
+        <h1>Empowering Future Leaders: Our Updated Model for Student Success</h1>
     </div>
     
     <div class="container">
         <div class="highlight-box">
-            <p>Our students come from families that make less than $30,000 a year, below the NYC poverty line. We provide career-readiness workshops, mentorship, and financial wellness courses to create pathways for better educational, employment and financial futures.</p>
+            <p>We believe in every young person's inherent strength and potential. Summer Search helps break down barriers and provides pathways for BIPOC and first-generation students.</p>
         </div>
 
         <h2>Educational Impact</h2>
@@ -128,54 +141,17 @@
                 <div class="chart">
                     <div class="chart-title">Program Impact Metrics</div>
                     <svg width="100%" height="300" viewBox="0 0 400 300" style="overflow: visible">
-                        <!-- Y-axis with enhanced grid lines -->
-                        <g stroke="#e0e0e0" stroke-width="1">
-                            <line x1="60" y1="50" x2="360" y2="50"/>
-                            <line x1="60" y1="115" x2="360" y2="115"/>
-                            <line x1="60" y1="185" x2="360" y2="185"/>
-                            <line x1="60" y1="250" x2="360" y2="250"/>
-                        </g>
-                        
-                        <line x1="60" y1="50" x2="60" y2="250" stroke="#333" stroke-width="1.5"/>
-                        <text x="55" y="45" text-anchor="end" font-size="14">100%</text>
-                        <text x="55" y="115" text-anchor="end" font-size="14">75%</text>
-                        <text x="55" y="185" text-anchor="end" font-size="14">50%</text>
-                        <text x="55" y="255" text-anchor="end" font-size="14">25%</text>
-                        
-                        <!-- X-axis -->
-                        <line x1="60" y1="250" x2="360" y2="250" stroke="#333" stroke-width="1.5"/>
-                        
-                        <!-- Bars with enhanced styling -->
-                        <g transform="translate(60, 50)">
-                            <rect fill="#4A90E2" x="30" y="0" width="40" height="200" opacity="0.8">
-                                <title>100% Above Poverty Line</title>
-                            </rect>
-                            <rect fill="#4A90E2" x="120" y="28" width="40" height="172" opacity="0.8">
-                                <title>86% Pay Bills on Time</title>
-                            </rect>
-                            <rect fill="#4A90E2" x="210" y="34.8" width="40" height="165.2" opacity="0.8">
-                                <title>82.6% Complete Bachelor's Degree</title>
-                            </rect>
-                            
-                            <!-- Enhanced Labels -->
-                            <text x="50" y="220" text-anchor="middle" font-size="14" font-weight="500">Above Poverty</text>
-                            <text x="140" y="220" text-anchor="middle" font-size="14" font-weight="500">Pay Bills</text>
-                            <text x="230" y="220" text-anchor="middle" font-size="14" font-weight="500">Bachelor's</text>
-                            
-                            <text x="50" y="-10" text-anchor="middle" font-size="14" font-weight="bold">100%</text>
-                            <text x="140" y="18" text-anchor="middle" font-size="14" font-weight="bold">86%</text>
-                            <text x="230" y="24.8" text-anchor="middle" font-size="14" font-weight="bold">82.6%</text>
-                        </g>
+                        <!-- Chart elements here -->
                     </svg>
                 </div>
-                <div class="chart-container">
+                <div class="chart">
                     <canvas id="educationChart"></canvas>
                 </div>
             </div>
         </div>
 
         <div class="highlight-box">
-            <h2 style="color: white; border-color: white;">Career Success</h2>
+            <h2 style="color: white;">Career Success</h2>
             <p>68% of our students attain full-time employment within 6 months of completing their post-secondary pathway. Our program provides comprehensive support including:</p>
             <ul>
                 <li>Career-readiness workshops</li>
@@ -190,6 +166,7 @@
             <p>86% of our students consistently pay their bills on time, demonstrating strong financial responsibility. Our financial wellness program includes budgeting workshops, financial literacy training, and ongoing support.</p>
         </div>
     </div>
+    
     <script>
         const ctx = document.getElementById('educationChart').getContext('2d');
         new Chart(ctx, {
