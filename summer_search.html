@@ -5,146 +5,177 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Why Does Summer Search Matter?</title>
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.4;
             color: #333;
-            overflow-y: auto;
+            margin: 0;
+            padding: 16px;
+            background-color: #f5f5f5;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
+            background-color: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         h1 {
-            color: #A5C5E9;
+            color: #4A90E2;
             text-align: center;
+            margin: 16px 0 24px;
+            font-size: 28px;
+            font-weight: 700;
         }
         h2 {
-            color: #FFD54F;
+            color: #4A90E2;
+            font-size: 22px;
+            margin: 20px 0 12px;
+            border-bottom: 2px solid #4A90E2;
+            padding-bottom: 8px;
         }
         .card {
             background-color: #f9f9f9;
             border-radius: 8px;
             padding: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
+            border: 1px solid #e0e0e0;
         }
-        .blue-bg {
-            background-color: #A5C5E9;
+        .highlight-box {
+            background-color: #4A90E2;
             color: white;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
         }
-        .yellow-bg {
-            background-color: #FFD54F;
-            color: white;
+        .stat-highlight {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4A90E2;
+            text-align: center;
+            margin: 16px 0;
         }
         .chart-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin: 24px 0;
         }
         .chart {
-            width: 100%;
-            margin-bottom: 20px;
+            background: white;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-        @media (min-width: 768px) {
-            .chart {
-                width: 48%;
+        @media (max-width: 600px) {
+            .chart-container {
+                grid-template-columns: 1fr;
             }
-        }
-        .bar {
-            fill: #A5C5E9;
-        }
-        .pie-slice {
-            stroke: #fff;
-            stroke-width: 2;
-        }
-        .chart-label {
-            font-size: 12px;
-            fill: #333;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Why Does Summer Search Matter?</h1>
+        <h1>Empowering Future Leaders Through Summer Search</h1>
         
-        <div class="card">
-            <p>Our students come from families that make less than $30,000 a year, which is under the NYC poverty line.</p>
-            <p>We provide career-readiness workshops, mentorship, and financial wellness courses that help lead them on a path towards better educational, employment and financial futures.</p>
+        <div class="highlight-box">
+            <p>Our students come from families that make less than $30,000 a year, below the NYC poverty line. We provide career-readiness workshops, mentorship, and financial wellness courses to create pathways for better educational, employment and financial futures.</p>
         </div>
 
-        <div class="card blue-bg">
-            <h2>Educational Attainment</h2>
-            <p>Higher education gives you a better chance of escaping poverty. Those with a bachelor's degree earn, on average, 50% more than those with a high school diploma or less. Our alumni outpace the national average on educational attainment.</p>
-            <ul>
-                <li>99% alumni graduate from High School</li>
-                <li>Over 85% matriculate into college</li>
-                <li>82.6% complete their Bachelor's Degree</li>
-            </ul>
+        <h2>Educational Impact</h2>
+        <div class="stat-highlight">
+            82.6% of participants complete their Bachelor's Degree
         </div>
-
+        
         <div class="card">
             <h2>Summer Search Impact and Alumni Educational Attainment</h2>
             <div class="chart-container">
                 <div class="chart">
-                    <svg width="100%" height="300" viewBox="0 0 400 300">
-                        <text x="200" y="30" text-anchor="middle" class="chart-label">Summer Search Impact</text>
-                        <g transform="translate(50, 50)">
-                            <rect class="bar" x="0" y="0" width="82.6" height="30"></rect>
-                            <rect class="bar" x="0" y="40" width="86" height="30"></rect>
-                            <rect class="bar" x="0" y="80" width="100" height="30"></rect>
-                            <text x="-5" y="15" text-anchor="end" class="chart-label">Bachelor's</text>
-                            <text x="-5" y="55" text-anchor="end" class="chart-label">Pay Bills</text>
-                            <text x="-5" y="95" text-anchor="end" class="chart-label">Above Poverty</text>
-                            <text x="87.6" y="15" class="chart-label">82.6%</text>
-                            <text x="91" y="55" class="chart-label">86%</text>
-                            <text x="105" y="95" class="chart-label">100%</text>
+                    <svg width="100%" height="300" viewBox="0 0 400 300" style="overflow: visible">
+                        <text x="200" y="30" text-anchor="middle" font-weight="bold">Program Impact Metrics</text>
+                        <!-- Y-axis -->
+                        <line x1="60" y1="50" x2="60" y2="250" stroke="#333" stroke-width="1"/>
+                        <text x="55" y="45" text-anchor="end" font-size="12">100%</text>
+                        <text x="55" y="115" text-anchor="end" font-size="12">75%</text>
+                        <text x="55" y="185" text-anchor="end" font-size="12">50%</text>
+                        <text x="55" y="255" text-anchor="end" font-size="12">25%</text>
+                        
+                        <!-- X-axis -->
+                        <line x1="60" y1="250" x2="360" y2="250" stroke="#333" stroke-width="1"/>
+                        
+                        <!-- Bars -->
+                        <g transform="translate(60, 50)">
+                            <rect fill="#4A90E2" x="30" y="0" width="40" height="200" opacity="0.8"/>
+                            <rect fill="#4A90E2" x="120" y="28" width="40" height="172" opacity="0.8"/>
+                            <rect fill="#4A90E2" x="210" y="34.8" width="40" height="165.2" opacity="0.8"/>
+                            
+                            <!-- Labels -->
+                            <text x="50" y="220" text-anchor="middle" font-size="12">Above Poverty</text>
+                            <text x="140" y="220" text-anchor="middle" font-size="12">Pay Bills</text>
+                            <text x="230" y="220" text-anchor="middle" font-size="12">Bachelor's</text>
+                            
+                            <text x="50" y="-10" text-anchor="middle" font-size="12">100%</text>
+                            <text x="140" y="18" text-anchor="middle" font-size="12">86%</text>
+                            <text x="230" y="24.8" text-anchor="middle" font-size="12">82.6%</text>
                         </g>
                     </svg>
                 </div>
                 <div class="chart">
                     <svg width="100%" height="300" viewBox="0 0 400 300">
-                        <text x="200" y="30" text-anchor="middle" class="chart-label">Alumni Educational Attainment</text>
+                        <text x="200" y="30" text-anchor="middle" font-weight="bold">Alumni Educational Attainment</text>
+                        
+                        <!-- Pie chart with calculated angles and external labels -->
                         <g transform="translate(200, 150)">
-                            <path d="M0,-100A100,100 0 0,1 30.9,-95.1L0,0Z" class="pie-slice" fill="#A5C5E9"></path>
-                            <path d="M30.9,-95.1A100,100 0 0,1 58.8,-80.9L0,0Z" class="pie-slice" fill="#7FB3E3"></path>
-                            <path d="M58.8,-80.9A100,100 0 0,1 95.1,30.9L0,0Z" class="pie-slice" fill="#5A9EDD"></path>
-                            <path d="M95.1,30.9A100,100 0 0,1 58.8,80.9L0,0Z" class="pie-slice" fill="#FFD54F"></path>
-                            <path d="M58.8,80.9A100,100 0 0,1 51.5,86.6L0,0Z" class="pie-slice" fill="#FFAB00"></path>
-                        </g>
-                        <g transform="translate(10, 280)">
-                            <rect x="0" y="0" width="10" height="10" fill="#A5C5E9"></rect>
-                            <text x="15" y="10" class="chart-label">Some College (10%)</text>
-                            <rect x="120" y="0" width="10" height="10" fill="#7FB3E3"></rect>
-                            <text x="135" y="10" class="chart-label">Associate's (5%)</text>
-                            <rect x="230" y="0" width="10" height="10" fill="#5A9EDD"></rect>
-                            <text x="245" y="10" class="chart-label">Bachelor's (62%)</text>
-                            <rect x="0" y="20" width="10" height="10" fill="#FFD54F"></rect>
-                            <text x="15" y="30" class="chart-label">Master's (20%)</text>
-                            <rect x="120" y="20" width="10" height="10" fill="#FFAB00"></rect>
-                            <text x="135" y="30" class="chart-label">Doctorate (3%)</text>
+                            <!-- Bachelor's (62%) -->
+                            <path d="M 0 0 L 95.1 -30.9 A 100 100 0 1 1 -95.1 -30.9 Z" 
+                                  fill="#4A90E2" stroke="white"/>
+                            <line x1="80" y1="-26" x2="140" y2="-45" stroke="#666" stroke-width="1"/>
+                            <text x="145" y="-45" font-size="12">Bachelor's 62%</text>
+
+                            <!-- Master's (20%) -->
+                            <path d="M 0 0 L -95.1 -30.9 A 100 100 0 0 1 -58.8 -80.9 Z" 
+                                  fill="#5A9EDD" stroke="white"/>
+                            <line x1="-75" y1="-55" x2="-130" y2="-80" stroke="#666" stroke-width="1"/>
+                            <text x="-135" y="-80" text-anchor="end" font-size="12">Master's 20%</text>
+
+                            <!-- Some College (10%) -->
+                            <path d="M 0 0 L -58.8 -80.9 A 100 100 0 0 1 0 -100 Z" 
+                                  fill="#7FB3E3" stroke="white"/>
+                            <line x1="-30" y1="-90" x2="-60" y2="-120" stroke="#666" stroke-width="1"/>
+                            <text x="-65" y="-120" text-anchor="end" font-size="12">Some College 10%</text>
+
+                            <!-- Associate's (5%) -->
+                            <path d="M 0 0 L 0 -100 A 100 100 0 0 1 58.8 -80.9 Z" 
+                                  fill="#FFD54F" stroke="white"/>
+                            <line x1="30" y1="-90" x2="60" y2="-120" stroke="#666" stroke-width="1"/>
+                            <text x="65" y="-120" font-size="12">Associate's 5%</text>
+
+                            <!-- Doctorate (3%) -->
+                            <path d="M 0 0 L 58.8 -80.9 A 100 100 0 0 1 95.1 -30.9 Z" 
+                                  fill="#FFAB00" stroke="white"/>
+                            <line x1="75" y1="-55" x2="130" y2="-80" stroke="#666" stroke-width="1"/>
+                            <text x="135" y="-80" font-size="12">Doctorate 3%</text>
                         </g>
                     </svg>
                 </div>
             </div>
         </div>
 
-        <div class="card yellow-bg">
-            <h2>Employment Opportunities</h2>
-            <p>Summer Search New York City has a proven track record of working with partnering organizations for Summer Internships.</p>
-            <p>100% of our students are above the NYC poverty threshold for a family of 4, demonstrating improved economic outcomes.</p>
+        <div class="highlight-box">
+            <h2 style="color: white; border-color: white;">Career Success</h2>
+            <p>68% of our students attain full-time employment within 6 months of completing their post-secondary pathway. Our program provides comprehensive support including:</p>
+            <ul>
+                <li>Career-readiness workshops</li>
+                <li>Internship placements</li>
+                <li>Professional mentorship</li>
+                <li>Networking opportunities</li>
+            </ul>
         </div>
 
         <div class="card">
             <h2>Financial Well-Being</h2>
-            <p>We begin supporting participants' financial well-being, one of our long-term outcomes, in high school.</p>
-            <p>86% of our students consistently pay their bills on time, demonstrating strong financial responsibility.</p>
+            <p>86% of our students consistently pay their bills on time, demonstrating strong financial responsibility. Our financial wellness program includes budgeting workshops, financial literacy training, and ongoing support.</p>
         </div>
     </div>
 </body>
