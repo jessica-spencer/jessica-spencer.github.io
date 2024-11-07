@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Does Summer Search Matter?</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-y: auto;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #A5C5E9;
+            text-align: center;
+        }
+        h2 {
+            color: #FFD54F;
+        }
+        .card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .blue-bg {
+            background-color: #A5C5E9;
+            color: white;
+        }
+        .yellow-bg {
+            background-color: #FFD54F;
+            color: white;
+        }
+        .chart-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .chart {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        @media (min-width: 768px) {
+            .chart {
+                width: 48%;
+            }
+        }
+        .bar {
+            fill: #A5C5E9;
+        }
+        .pie-slice {
+            stroke: #fff;
+            stroke-width: 2;
+        }
+        .chart-label {
+            font-size: 12px;
+            fill: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Why Does Summer Search Matter?</h1>
+        
+        <div class="card">
+            <p>Our students come from families that make less than $30,000 a year, which is under the NYC poverty line.</p>
+            <p>We provide career-readiness workshops, mentorship, and financial wellness courses that help lead them on a path towards better educational, employment and financial futures.</p>
+        </div>
+
+        <div class="card blue-bg">
+            <h2>Educational Attainment</h2>
+            <p>Higher education gives you a better chance of escaping poverty. Those with a bachelor's degree earn, on average, 50% more than those with a high school diploma or less. Our alumni outpace the national average on educational attainment.</p>
+            <ul>
+                <li>99% alumni graduate from High School</li>
+                <li>Over 85% matriculate into college</li>
+                <li>82.6% complete their Bachelor's Degree</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Summer Search Impact and Alumni Educational Attainment</h2>
+            <div class="chart-container">
+                <div class="chart">
+                    <svg width="100%" height="300" viewBox="0 0 400 300">
+                        <text x="200" y="30" text-anchor="middle" class="chart-label">Summer Search Impact</text>
+                        <g transform="translate(50, 50)">
+                            <rect class="bar" x="0" y="0" width="82.6" height="30"></rect>
+                            <rect class="bar" x="0" y="40" width="86" height="30"></rect>
+                            <rect class="bar" x="0" y="80" width="100" height="30"></rect>
+                            <text x="-5" y="15" text-anchor="end" class="chart-label">Bachelor's</text>
+                            <text x="-5" y="55" text-anchor="end" class="chart-label">Pay Bills</text>
+                            <text x="-5" y="95" text-anchor="end" class="chart-label">Above Poverty</text>
+                            <text x="87.6" y="15" class="chart-label">82.6%</text>
+                            <text x="91" y="55" class="chart-label">86%</text>
+                            <text x="105" y="95" class="chart-label">100%</text>
+                        </g>
+                    </svg>
+                </div>
+                <div class="chart">
+                    <svg width="100%" height="300" viewBox="0 0 400 300">
+                        <text x="200" y="30" text-anchor="middle" class="chart-label">Alumni Educational Attainment</text>
+                        <g transform="translate(200, 150)">
+                            <path d="M0,-100A100,100 0 0,1 30.9,-95.1L0,0Z" class="pie-slice" fill="#A5C5E9"></path>
+                            <path d="M30.9,-95.1A100,100 0 0,1 58.8,-80.9L0,0Z" class="pie-slice" fill="#7FB3E3"></path>
+                            <path d="M58.8,-80.9A100,100 0 0,1 95.1,30.9L0,0Z" class="pie-slice" fill="#5A9EDD"></path>
+                            <path d="M95.1,30.9A100,100 0 0,1 58.8,80.9L0,0Z" class="pie-slice" fill="#FFD54F"></path>
+                            <path d="M58.8,80.9A100,100 0 0,1 51.5,86.6L0,0Z" class="pie-slice" fill="#FFAB00"></path>
+                        </g>
+                        <g transform="translate(10, 280)">
+                            <rect x="0" y="0" width="10" height="10" fill="#A5C5E9"></rect>
+                            <text x="15" y="10" class="chart-label">Some College (10%)</text>
+                            <rect x="120" y="0" width="10" height="10" fill="#7FB3E3"></rect>
+                            <text x="135" y="10" class="chart-label">Associate's (5%)</text>
+                            <rect x="230" y="0" width="10" height="10" fill="#5A9EDD"></rect>
+                            <text x="245" y="10" class="chart-label">Bachelor's (62%)</text>
+                            <rect x="0" y="20" width="10" height="10" fill="#FFD54F"></rect>
+                            <text x="15" y="30" class="chart-label">Master's (20%)</text>
+                            <rect x="120" y="20" width="10" height="10" fill="#FFAB00"></rect>
+                            <text x="135" y="30" class="chart-label">Doctorate (3%)</text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="card yellow-bg">
+            <h2>Employment Opportunities</h2>
+            <p>Summer Search New York City has a proven track record of working with partnering organizations for Summer Internships.</p>
+            <p>100% of our students are above the NYC poverty threshold for a family of 4, demonstrating improved economic outcomes.</p>
+        </div>
+
+        <div class="card">
+            <h2>Financial Well-Being</h2>
+            <p>We begin supporting participants' financial well-being, one of our long-term outcomes, in high school.</p>
+            <p>86% of our students consistently pay their bills on time, demonstrating strong financial responsibility.</p>
+        </div>
+    </div>
+</body>
+</html>
