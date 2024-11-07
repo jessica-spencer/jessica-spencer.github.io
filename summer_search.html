@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Why Does Summer Search Matter?</title>
     <style>
         body {
@@ -10,8 +11,19 @@
             line-height: 1.4;
             color: #333;
             margin: 0;
-            padding: 16px;
+            padding: 0;
             background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #FFD700;
+            padding: 24px 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            color: #333;
+            margin: 0;
+            text-align: center;
         }
         .container {
             max-width: 800px;
@@ -55,30 +67,52 @@
             color: #4A90E2;
             text-align: center;
             margin: 16px 0;
+            padding: 16px;
+            background: #f0f7ff;
+            border-radius: 8px;
         }
         .chart-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 24px;
             margin: 24px 0;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .chart {
             background: white;
-            padding: 16px;
+            padding: 24px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .chart text {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        .chart-title {
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 16px;
         }
         @media (max-width: 600px) {
             .chart-container {
                 grid-template-columns: 1fr;
             }
         }
+        .chart-container {
+           
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="header">
         <h1>Empowering Future Leaders Through Summer Search</h1>
-        
+    </div>
+    
+    <div class="container">
         <div class="highlight-box">
             <p>Our students come from families that make less than $30,000 a year, below the NYC poverty line. We provide career-readiness workshops, mentorship, and financial wellness courses to create pathways for better educational, employment and financial futures.</p>
         </div>
@@ -92,72 +126,50 @@
             <h2>Summer Search Impact and Alumni Educational Attainment</h2>
             <div class="chart-container">
                 <div class="chart">
+                    <div class="chart-title">Program Impact Metrics</div>
                     <svg width="100%" height="300" viewBox="0 0 400 300" style="overflow: visible">
-                        <text x="200" y="30" text-anchor="middle" font-weight="bold">Program Impact Metrics</text>
-                        <!-- Y-axis -->
-                        <line x1="60" y1="50" x2="60" y2="250" stroke="#333" stroke-width="1"/>
-                        <text x="55" y="45" text-anchor="end" font-size="12">100%</text>
-                        <text x="55" y="115" text-anchor="end" font-size="12">75%</text>
-                        <text x="55" y="185" text-anchor="end" font-size="12">50%</text>
-                        <text x="55" y="255" text-anchor="end" font-size="12">25%</text>
+                        <!-- Y-axis with enhanced grid lines -->
+                        <g stroke="#e0e0e0" stroke-width="1">
+                            <line x1="60" y1="50" x2="360" y2="50"/>
+                            <line x1="60" y1="115" x2="360" y2="115"/>
+                            <line x1="60" y1="185" x2="360" y2="185"/>
+                            <line x1="60" y1="250" x2="360" y2="250"/>
+                        </g>
+                        
+                        <line x1="60" y1="50" x2="60" y2="250" stroke="#333" stroke-width="1.5"/>
+                        <text x="55" y="45" text-anchor="end" font-size="14">100%</text>
+                        <text x="55" y="115" text-anchor="end" font-size="14">75%</text>
+                        <text x="55" y="185" text-anchor="end" font-size="14">50%</text>
+                        <text x="55" y="255" text-anchor="end" font-size="14">25%</text>
                         
                         <!-- X-axis -->
-                        <line x1="60" y1="250" x2="360" y2="250" stroke="#333" stroke-width="1"/>
+                        <line x1="60" y1="250" x2="360" y2="250" stroke="#333" stroke-width="1.5"/>
                         
-                        <!-- Bars -->
+                        <!-- Bars with enhanced styling -->
                         <g transform="translate(60, 50)">
-                            <rect fill="#4A90E2" x="30" y="0" width="40" height="200" opacity="0.8"/>
-                            <rect fill="#4A90E2" x="120" y="28" width="40" height="172" opacity="0.8"/>
-                            <rect fill="#4A90E2" x="210" y="34.8" width="40" height="165.2" opacity="0.8"/>
+                            <rect fill="#4A90E2" x="30" y="0" width="40" height="200" opacity="0.8">
+                                <title>100% Above Poverty Line</title>
+                            </rect>
+                            <rect fill="#4A90E2" x="120" y="28" width="40" height="172" opacity="0.8">
+                                <title>86% Pay Bills on Time</title>
+                            </rect>
+                            <rect fill="#4A90E2" x="210" y="34.8" width="40" height="165.2" opacity="0.8">
+                                <title>82.6% Complete Bachelor's Degree</title>
+                            </rect>
                             
-                            <!-- Labels -->
-                            <text x="50" y="220" text-anchor="middle" font-size="12">Above Poverty</text>
-                            <text x="140" y="220" text-anchor="middle" font-size="12">Pay Bills</text>
-                            <text x="230" y="220" text-anchor="middle" font-size="12">Bachelor's</text>
+                            <!-- Enhanced Labels -->
+                            <text x="50" y="220" text-anchor="middle" font-size="14" font-weight="500">Above Poverty</text>
+                            <text x="140" y="220" text-anchor="middle" font-size="14" font-weight="500">Pay Bills</text>
+                            <text x="230" y="220" text-anchor="middle" font-size="14" font-weight="500">Bachelor's</text>
                             
-                            <text x="50" y="-10" text-anchor="middle" font-size="12">100%</text>
-                            <text x="140" y="18" text-anchor="middle" font-size="12">86%</text>
-                            <text x="230" y="24.8" text-anchor="middle" font-size="12">82.6%</text>
+                            <text x="50" y="-10" text-anchor="middle" font-size="14" font-weight="bold">100%</text>
+                            <text x="140" y="18" text-anchor="middle" font-size="14" font-weight="bold">86%</text>
+                            <text x="230" y="24.8" text-anchor="middle" font-size="14" font-weight="bold">82.6%</text>
                         </g>
                     </svg>
                 </div>
-                <div class="chart">
-                    <svg width="100%" height="300" viewBox="0 0 400 300">
-                        <text x="200" y="30" text-anchor="middle" font-weight="bold">Alumni Educational Attainment</text>
-                        
-                        <!-- Pie chart with calculated angles and external labels -->
-                        <g transform="translate(200, 150)">
-                            <!-- Bachelor's (62%) -->
-                            <path d="M 0 0 L 95.1 -30.9 A 100 100 0 1 1 -95.1 -30.9 Z" 
-                                  fill="#4A90E2" stroke="white"/>
-                            <line x1="80" y1="-26" x2="140" y2="-45" stroke="#666" stroke-width="1"/>
-                            <text x="145" y="-45" font-size="12">Bachelor's 62%</text>
-
-                            <!-- Master's (20%) -->
-                            <path d="M 0 0 L -95.1 -30.9 A 100 100 0 0 1 -58.8 -80.9 Z" 
-                                  fill="#5A9EDD" stroke="white"/>
-                            <line x1="-75" y1="-55" x2="-130" y2="-80" stroke="#666" stroke-width="1"/>
-                            <text x="-135" y="-80" text-anchor="end" font-size="12">Master's 20%</text>
-
-                            <!-- Some College (10%) -->
-                            <path d="M 0 0 L -58.8 -80.9 A 100 100 0 0 1 0 -100 Z" 
-                                  fill="#7FB3E3" stroke="white"/>
-                            <line x1="-30" y1="-90" x2="-60" y2="-120" stroke="#666" stroke-width="1"/>
-                            <text x="-65" y="-120" text-anchor="end" font-size="12">Some College 10%</text>
-
-                            <!-- Associate's (5%) -->
-                            <path d="M 0 0 L 0 -100 A 100 100 0 0 1 58.8 -80.9 Z" 
-                                  fill="#FFD54F" stroke="white"/>
-                            <line x1="30" y1="-90" x2="60" y2="-120" stroke="#666" stroke-width="1"/>
-                            <text x="65" y="-120" font-size="12">Associate's 5%</text>
-
-                            <!-- Doctorate (3%) -->
-                            <path d="M 0 0 L 58.8 -80.9 A 100 100 0 0 1 95.1 -30.9 Z" 
-                                  fill="#FFAB00" stroke="white"/>
-                            <line x1="75" y1="-55" x2="130" y2="-80" stroke="#666" stroke-width="1"/>
-                            <text x="135" y="-80" font-size="12">Doctorate 3%</text>
-                        </g>
-                    </svg>
+                <div class="chart-container">
+                    <canvas id="educationChart"></canvas>
                 </div>
             </div>
         </div>
@@ -178,5 +190,46 @@
             <p>86% of our students consistently pay their bills on time, demonstrating strong financial responsibility. Our financial wellness program includes budgeting workshops, financial literacy training, and ongoing support.</p>
         </div>
     </div>
+    <script>
+        const ctx = document.getElementById('educationChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: [
+                    'Some College (No Degree)',
+                    'Associate\'s Degree',
+                    'Bachelor\'s Degree',
+                    'Master\'s Degree',
+                    'Doctorate'
+                ],
+                datasets: [{
+                    data: [10, 5, 62, 20, 3],
+                    backgroundColor: [
+                        '#FF6384',
+                        '#36A2EB',
+                        '#FFCE56',
+                        '#4BC0C0',
+                        '#9966FF'
+                    ],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Educational Attainment in Summer Search Alumni',
+                        font: {
+                            size: 16
+                        }
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
