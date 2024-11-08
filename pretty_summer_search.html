@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Dancing+Script&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Summer Search - Empowering Future Leaders</title>
+    <style>
+        :root {
+            --summer-yellow: #fbb03b;
+            --summer-blue: #a5c5f7;
+            --summer-brown: #8b7355;
+            --text-dark: #4a4a4a;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        .header-container {
+            background-color: var(--summer-yellow);
+            position: relative;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            overflow: hidden;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .logo {
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 2rem;
+        }
+
+        .header-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background-color: white;
+            clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 100%);
+            z-index: 1;
+        }
+
+        .title-section {
+            text-align: right;
+            flex-grow: 1;
+        }
+
+        .main-title {
+            color: var(--summer-blue);
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            color: var(--summer-blue);
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            margin: 0.5rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .highlight {
+            color: var(--summer-brown);
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-box {
+            background-color: var(--summer-blue);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 2rem 0;
+            max-width: 400px;
+        }
+
+        .section-title {
+            color: var(--summer-yellow);
+            font-size: 2rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .chart-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .title-section {
+                text-align: center;
+                margin-top: 2rem;
+            }
+
+            .main-title {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <a href="#" class="logo">SUMMER SEARCH</a>
+            <div class="title-section">
+                <h1 class="main-title">Why Does Summer Search Matter?</h1>
+                <div class="subtitle">How Our Alumni Outpace the Nation </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <p>At Summer Search, we believe in every young person's <span class="highlight">inherent strength and potential</span>. For over 35 years, we've been breaking down systemic barriers that stand in the way of BIPOC and First-Generation students. Our focus has helped our alumni in the <span class="highlight">critical transitions from high school to post-secondary education and early career success</span>.</p>
+
+        <p> Our students come from families that make less than $30,000 a year, which is under the NYC poverty line. We provide <span class="highlight">career-readiness workshops, mentorship, and financial wellness courses</span> that help lead them on a path towards better educational, employment and financial futures.</p>
+
+        <div class="stat-box">
+            68% of participants attain full-time employment within 6 months of completing a post-secondary pathway
+        </div>
+
+        <!-- Charts section remains the same as in your original code -->
+        <div class="chart-container">
+            <div class="chart">
+                    <img src="pie_chart.png" alt="pie chart of educational attainment">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Your existing Chart.js script remains the same
+    </script>
+</body>
+</html>
