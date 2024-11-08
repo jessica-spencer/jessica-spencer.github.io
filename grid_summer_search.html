@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Search - Empowering Future Leaders</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --summer-yellow: #fbb03b;
+            --summer-blue: #a5c5f7;
+            --summer-brown: #8b7355;
+            --text-dark: #4a4a4a;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        .header {
+            background-color: var(--summer-yellow);
+            position: relative;
+            padding: 4rem 2rem 8rem;
+            overflow: hidden;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 6rem;
+            background-color: white;
+            transform: skewY(-3deg);
+            transform-origin: 100%;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .logo {
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .title-section {
+            text-align: right;
+        }
+
+        .main-title {
+            color: var(--summer-blue);
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            color: var(--summer-blue);
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            margin: 0.5rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .highlight {
+            color: var(--summer-brown);
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card-blue {
+            background-color: var(--summer-blue);
+            color: white;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-text {
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .section-title {
+            color: var(--summer-yellow);
+            font-size: 2rem;
+            margin: 2rem 0 1rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .title-section {
+                text-align: center;
+                margin-top: 2rem;
+            }
+
+            .main-title {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="#" class="logo">SUMMER SEARCH</a>
+            <div class="title-section">
+                <h1 class="main-title">Why Does Summer Search Matter?</h1>
+                <div class="subtitle">How Our Alumni Outpace the Nation</div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <p>At Summer Search, we believe in every young person's <span class="highlight">inherent strength and potential</span>. For over 35 years, we've been breaking down systemic barriers that stand in the way of BIPOC and First-Generation students. Our focus has helped our alumni in the <span class="highlight">critical transitions from high school to post-secondary education and early career success</span>.</p>
+
+        <p>Our students come from families that make less than $30,000 a year, which is under the NYC poverty line. We provide <span class="highlight">career-readiness workshops, mentorship, and financial wellness courses</span> that help lead them on a path towards better educational, employment and financial futures.</p>
+
+        <p>Research shows that <span class="highlight">education is the key to escaping poverty</span>. Our Alumni <span class="highlight">outperform the national average in educational attainment</span>.</p>
+        
+        <div class="grid">
+            <div class="card card-blue">
+                <div class="card-content">
+                    <p class="card-text">85% of Summer Search Alumni complete their Bachelor's Degree, versus only 21% of Low-Income First Generation students nationally.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Pie chart comparing Summer Search Alumni (85%) to Low-Income First Generation students (21%) in Bachelor's Degree completion">
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Employment Opportunity</h2>
+
+        <div class="grid">
+            <div class="card card-blue">
+                <div class="card-content">
+                    <p class="card-text">68% of participants attain full-time employment within 6 months of completing a post-secondary pathway</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Bar chart comparing national employment rate (50%) to Summer Search Alumni employment rate (68%)">
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
