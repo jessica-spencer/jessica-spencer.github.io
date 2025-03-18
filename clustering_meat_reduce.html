@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bryant Research: Animal Welfare Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            background: url('https://source.unsplash.com/1600x600/?animals,nature') no-repeat center center;
+            background-size: cover;
+            padding: 50px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        h3 {
+            color: #d9534f;
+        }
+        a {
+            color: #ff7f0e;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            background-color: #ff7f0e;
+            color: white;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Bryant Research: Animal Welfare Data
+</header>
+
+<div class="container">
+    <h1>Animal Welfare Data</h1>
+    <p><span class="highlight">The DATA:</span> This is the data for the Bryant Research 2024 summer survey. A representative survey of the UK population on topics relating to meat consumption, how they view animals and animal products, and alternative proteins.</p>
+    <p><span class="highlight">The SOURCE:</span> <a href="https://osf.io/5s3wk">Bryant Research Survey</a></p>
+
+    <h2>Clustering Analysis Report</h2>
+    <p>An overview of the clustering results and insights.</p>
+
+    <h3>Introduction</h3>
+    <p>This report presents the results of clustering analysis performed on food consumption patterns, attitudes towards meat/dairy, and dietary preferences. The aim is to identify patterns and group similar data points for further analysis.</p>
+
+    <h3>Methods</h3>
+    <p>The clustering method used was <span class="highlight">K-Means</span>, along with silhouette scores to evaluate the cluster quality.</p>
+
+    <h3>Results</h3>
+    <p>Silhouette scores show that the optimal number of clusters is 2.</p>
+    <img src="images/silhouette_scores.png" alt="Silhouette scores for the dataset">
+            
+    <p>Upon analysis,these two clusters  divided the <span class="highlight">Meat Eaters</span> from the <span class="highlight">Meat-Reducers</span></p>. 
+    <img src="images/cluster_radar_chart.png" alt="Radar chart for features">
+    <p>This radar chart shows that the groups are very separable, meaning that there's little overlap on the variables of interest. 
+        Cluster profiles were created by looking at the mean values of each of the features, and are available in the full report.
+        Demographic information was also considered, and it was found that the two groups have slightly different average demographics:
+    </p>
+    <ul>
+        <li><b>Meat-Eating Cluster 0</b>: Higher average age, generally male, and 'liberal-leaning'.</li>
+        <li><b>Meat-Reducing and Plant-Based Cluster 1</b>: Slightly younger, generally female, and identifies as 'liberal'.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>The clustering analysis successfully identified distinct groups within the dataset. The demographic differences between the data sets can help us understand how to influence attitudes around plant-based diets in the UK going forward.</p>
+</div>
+
+</body>
+</html>
