@@ -5,66 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bryant Research: Animal Welfare Data</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            text-align: center;
-            background: image('images/veggie_report.jpg') no-repeat center center;
-            background-size: cover;
-            padding: 50px;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-        }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
-        h1, h2 {
-            color: #0056b3;
-        }
-        h3 {
-            color: #d9534f;
-        }
-        a {
-            color: #ff7f0e;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .highlight {
-            background-color: #ff7f0e;
-            color: white;
-            padding: 3px 6px;
-            border-radius: 4px;
-        }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.8; margin: 40px; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1, h2 { color: #34495e; }
+        .section { margin-bottom: 25px; }
+        .highlight { color: #c0392b; font-weight: bold; }
+        a { color: #2980b9; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        img { max-width: 100%; height: auto; display: block; margin: 20px 0; border-radius: 5px; }
     </style>
 </head>
 <body>
 
 <header>
-    Bryant Research: Animal Welfare Data
+    <header>
+        <img src="images/veggie_report.jpg" alt="vegetables">
+        <h1> Survey Participant Profiling: A Clustering Analysis Report</h1>
+    </header>
+   
 </header>
 
 <div class="container">
-    <h1>Animal Welfare Data</h1>
-    <p><span class="highlight">The DATA:</span> This is the data for the Bryant Research 2024 summer survey. A representative survey of the UK population on topics relating to meat consumption, how they view animals and animal products, and alternative proteins.</p>
-    <p><span class="highlight">The SOURCE:</span> <a href="https://osf.io/5s3wk">Bryant Research Survey</a></p>
+    
+    <h2>Survey Participant Profiling: A Clustering Analysis Report</h2>
+    <p>The goal of this report is to get a profile of survey participants. With this profile, efforts to advocate for plant based diets and animal welfare can be more targeted. 
+        An overview of the clustering results and insights follows.</p>
+    
+    <p><span class="highlight">The Data:</span> This is the data for the Bryant Research 2024 summer survey. A representative survey of the UK population on topics relating to meat consumption, how they view animals and animal products, and alternative proteins.</p>
+    <p><span class="highlight">The Source:</span> <a href="https://osf.io/5s3wk">Bryant Research Survey</a></p>
+    <p><span class="highlight">The Full Report:</span> <a href="https://osf.io/5s3wk">GitHub Link to Project</a></p>
 
-    <h2>Clustering Analysis Report</h2>
-    <p>An overview of the clustering results and insights.</p>
 
     <h3>Introduction</h3>
     <p>This report presents the results of clustering analysis performed on food consumption patterns, attitudes towards meat/dairy, and dietary preferences. The aim is to identify patterns and group similar data points for further analysis.</p>
@@ -74,11 +44,8 @@
 
     <h3>Results</h3>
     <p>Silhouette scores show that the optimal number of clusters is 2.</p>
-    <img src="images/silhouette_scores.png" alt="Silhouette scores for the dataset">
-            
     <p>Upon analysis,these two clusters  divided the <span class="highlight">Meat Eaters</span> from the <span class="highlight">Meat-Reducers</span></p>. 
-    <img src="images/cluster_radar_chart.png" alt="Radar chart for features">
-    <p>This radar chart shows that the groups are very separable, meaning that there's little overlap on the variables of interest. 
+    <p>A radar chart shows that the groups are very separable, meaning that there's little overlap on the variables of interest. 
         Cluster profiles were created by looking at the mean values of each of the features, and are available in the full report.
         Demographic information was also considered, and it was found that the two groups have slightly different average demographics:
     </p>
