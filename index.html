@@ -1,567 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jessica Spencer - Data Science Portfolio</title>
-    <link rel="icon" href="silly_sybil.jpeg" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #1a237e;
-            --secondary-color: #3949ab;
-            --text-color: #333;
-            --background-color: #f5f5f5;
-            --card-background: #ffffff;
-        }
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: var(--text-color);
-            background-color: var(--background-color);
-        }
-        header, nav, main, footer {
-            padding: 20px;
-        }
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-        .profile-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .profile-picture {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid white;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3em;
-            margin: 20px 0 10px;
-        }
-        header p {
-            font-size: 1.2em;
-            opacity: 0.8;
-            margin-bottom: 20px;
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .social-links a {
-            color: white;
-            font-size: 1.5em;
-            transition: opacity 0.3s ease;
-        }
-        .social-links a:hover {
-            opacity: 0.8;
-        }
-        nav {
-            background-color: var(--secondary-color);
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            transition: opacity 0.3s ease;
-        }
-        nav ul li a:hover {
-            opacity: 0.8;
-        }
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        section {
-            margin-bottom: 50px;
-        }
-        h2 {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-color);
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        .project {
-            background-color: var(--card-background);
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-        .project a {
-            text-decoration: none;
-            color: var(--text-color);
-        }
-        .project h3 {
-            margin-top: 0;
-            color: var(--secondary-color);
-            font-size: 1.4em;
-        }
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-        .skill {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            transition: background-color 0.3s ease;
-        }
-        .skill:hover {
-            background-color: var(--primary-color);
-        }
-        .education-item {
-            margin-bottom: 30px;
-        }
-        .education-item h3 {
-            color: var(--secondary-color);
-            margin-bottom: 5px;
-            font-size: 1.4em;
-        }
-        .coursework h4 {
-            color: var(--primary-color);
-            margin: 15px 0 10px;
-            font-size: 1.1em;
-        }
-        .coursework ul {
-            list-style-type: none;
-            padding-left: 0;
-            columns: 2;
-            -webkit-columns: 2;
-            -moz-columns: 2;
-        }
-        .coursework li {
-            margin-bottom: 5px;
-        }
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-         /* Updated and new styles for the projects section */
-         .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        .project {
-            background-color: var(--card-background);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-        .project-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .project-content {
-            padding: 20px;
-        }
-        .project h3 {
-            margin-top: 0;
-            color: var(--secondary-color);
-            font-size: 1.4em;
-        }
-        .project p {
-            margin-bottom: 15px;
-        }
-        .project-link {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 4px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-        .project-link:hover {
-            background-color: var(--primary-color);
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tiny-anya — Social Work AI Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    .project-link-wrapper {
-        display: block;
-        text-decoration: none;
-        color: inherit;
+    :root {
+      --cream: #F5F0E8;
+      --forest: #1A3A1A;
+      --moss: #5A8A3A;
+      --moss-light: #EAF2E3;
+      --ink: #2C2C2A;
+      --muted: #6B6B68;
+      --border: #D4CFC4;
+      --white: #FFFFFF;
+      --section-gap: 5rem;
     }
 
-    .project-link-wrapper:hover {
-        text-decoration: none;
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 16px;
     }
 
-    .project-link {
-        display: inline-block;
-        background-color: var(--secondary-color);
-        color: white;
-        padding: 8px 16px;
-        border-radius: 4px;
-        transition: background-color 0.3s ease;
+    /* ── HEADER ── */
+    header {
+      background: var(--forest);
+      color: var(--cream);
+      padding: 3rem 2rem 2.5rem;
+      text-align: center;
     }
 
-    .project-link-wrapper:hover .project-link {
-        background-color: var(--primary-color);
+    header .eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #97BC62;
+      margin-bottom: 0.75rem;
+      font-weight: 500;
     }
 
-    /* Ensure the project content maintains its styles */
-    .project-link-wrapper .project-content h3,
-    .project-link-wrapper .project-content p {
-        color: inherit;
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.2rem, 6vw, 3.5rem);
+      line-height: 1.15;
+      color: var(--cream);
+      margin-bottom: 1rem;
     }
-    /* Add new styles for tags */
-    .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 12px;
-        }
-        .project-tag {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.8em;
-            transition: background-color 0.3s ease;
-        }
-        .project-tag:hover {
-            background-color: var(--primary-color);
-        }
 
-        #skills {
-            background-color: var(--background-color);
-            padding: 40px 0;
-            margin-bottom: 50px;
-        }
+    header h1 em {
+      font-style: italic;
+      color: #97BC62;
+    }
 
-        .skills-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            gap: 30px;
-        }
+    header p {
+      max-width: 560px;
+      margin: 0 auto;
+      color: #B8C4A8;
+      font-size: 1rem;
+      font-weight: 300;
+    }
 
-        .skills-column {
-            flex: 1;
-        }
+    /* ── NAV DOTS ── */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1.5rem 2rem;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
+    nav a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
 
-        .skill {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            transition: background-color 0.3s ease;
-        }
+    nav a:hover {
+      color: var(--moss);
+      border-bottom-color: var(--moss);
+    }
 
-        .skill:hover {
-            background-color: var(--primary-color);
-        }
-    </style>
+    /* ── MAIN LAYOUT ── */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ── SECTION SHARED ── */
+    section {
+      padding: var(--section-gap) 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type { border-bottom: none; }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--moss);
+      background: var(--moss-light);
+      padding: 0.3rem 0.75rem;
+      border-radius: 2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      color: var(--forest);
+      margin-bottom: 1.5rem;
+      line-height: 1.25;
+    }
+
+    /* ── PROMPT ENGINEERING SECTION ── */
+    .prompt-intro {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      max-width: 640px;
+    }
+
+    .prompt-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 1.25rem;
+      overflow: hidden;
+    }
+
+    .prompt-card-header {
+      background: var(--forest);
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .prompt-card-header .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #97BC62;
+    }
+
+    .prompt-card-header span {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #B8C4A8;
+      letter-spacing: 0.05em;
+    }
+
+    .prompt-card-body {
+      padding: 1.25rem;
+    }
+
+    .prompt-card-body p {
+      font-size: 0.95rem;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .prompt-card-body .label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--moss);
+      margin-bottom: 0.35rem;
+      display: block;
+    }
+
+    .prompt-card-body .prompt-text {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--forest);
+      background: var(--moss-light);
+      border-left: 3px solid var(--moss);
+      padding: 0.75rem 1rem;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 1rem;
+    }
+
+    .prompt-card-body .notes {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    /* ── MODEL SECTION ── */
+    .model-intro {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 1.75rem;
+      max-width: 600px;
+    }
+
+    .model-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--forest);
+      color: var(--cream);
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover {
+      background: var(--moss);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary svg {
+      width: 14px; height: 14px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+    }
+
+    .btn-note {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .iframe-wrapper {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 4px 24px rgba(26,58,26,0.07);
+    }
+
+    .iframe-bar {
+      background: var(--forest);
+      padding: 0.6rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .iframe-bar .circle {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+    }
+
+    .iframe-bar .c1 { background: #FF6058; }
+    .iframe-bar .c2 { background: #FFBD2E; }
+    .iframe-bar .c3 { background: #28CA42; }
+
+    .iframe-bar .url {
+      margin-left: 0.5rem;
+      font-size: 0.75rem;
+      color: #B8C4A8;
+      font-weight: 300;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+
+    @media (max-width: 600px) {
+      iframe { height: 480px; }
+    }
+
+    /* ── EVALUATION SECTION ── */
+    .eval-intro {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      max-width: 640px;
+    }
+
+    .eval-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .eval-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+
+    .eval-card .metric {
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--moss);
+      margin-bottom: 0.5rem;
+    }
+
+    .eval-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.05rem;
+      color: var(--forest);
+      margin-bottom: 0.5rem;
+    }
+
+    .eval-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .eval-note {
+      background: var(--moss-light);
+      border: 1px solid #C2D9B0;
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      font-size: 0.92rem;
+      color: var(--forest);
+    }
+
+    .eval-note strong { font-weight: 500; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    footer a {
+      color: var(--moss);
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="profile-container">
-            <img src="images/matterhorn_png.png?height=200&width=200" alt="Jessica Spencer" class="profile-picture">
-            <h1>Jessica Spencer</h1>
-            <p>Data Scientist | Expert in Statistical Analysis & Machine Learning </p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/jessica-spencer-ab8107b5" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.kaggle.com/uwu1234" target="_blank" aria-label="Kaggle"><i class="fab fa-kaggle"></i></a>
-                <a href="https://github.com/jessica-spencer" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            </div>
+
+  <header>
+    <p class="eyebrow">Social Work AI Prototype</p>
+    <h1>tiny-<em>anya</em></h1>
+    <p>A fine-tuned multilingual model shaped for social work practice — built with data justice, open science, and client confidentiality in mind.</p>
+  </header>
+
+  <nav>
+    <a href="#prompts">Prompt Engineering</a>
+    <a href="#model">Try the Model</a>
+    <a href="#evaluation">Evaluation</a>
+  </nav>
+
+  <main>
+
+    <!-- ── SECTION 1: PROMPT ENGINEERING ── -->
+    <section id="prompts">
+      <span class="section-label">Section 1</span>
+      <h2 class="section-title">Prompt Engineering Examples</h2>
+      <p class="prompt-intro">
+        These prompts were designed to guide the model toward responses that reflect social work values — strengths-based framing, cultural humility, and trauma-informed language. Add your own examples and notes below.
+      </p>
+
+      <!-- Example card 1 -->
+      <div class="prompt-card">
+        <div class="prompt-card-header">
+          <div class="dot"></div>
+          <span>Example Prompt 1</span>
         </div>
-    </header>
+        <div class="prompt-card-body">
+          <span class="label">Prompt</span>
+          <p class="prompt-text">You are a social work assistant. Respond using strengths-based, trauma-informed language. Avoid deficit framing. The client says: "[client message]"</p>
+          <span class="label">Why it works</span>
+          <p class="notes">Explicitly naming the framework upfront ("strengths-based, trauma-informed") shapes the model's register before it generates a response. Add your own analysis here.</p>
+        </div>
+      </div>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-        </ul>
-    </nav>
+      <!-- Example card 2 -->
+      <div class="prompt-card">
+        <div class="prompt-card-header">
+          <div class="dot"></div>
+          <span>Example Prompt 2</span>
+        </div>
+        <div class="prompt-card-body">
+          <span class="label">Prompt</span>
+          <p class="prompt-text">Summarize the following case note in two sentences, using neutral, non-judgmental language: "[case note text]"</p>
+          <span class="label">Why it works</span>
+          <p class="notes">Constraining output length and naming the tone prevents the model from embellishing or editorializing. Replace this with your own examples and observations.</p>
+        </div>
+      </div>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-           <!--<p>Combining statistical expertise from NYU Steinhardt with 4 years of data product leadership, I transform complex datasets into actionable insights for social good. Whether I'm improving financial market research efficiency by 20% or investigating community engagement through citizen surveys, I'm passionate about data-driven social impact. Currently seeking roles where I can apply data science to foster positive change.</p>--> 
-           <p>As a seasoned Data Scientist, I harness the power of data to address critical social challenges. My expertise spans statistical analysis, machine learning, data visualization, and software development, with proficiency in Python, R, and SQL. I specialize in transforming complex data into clear, actionable insights that drive strategic decision-making and meaningful change.</p>
+      <!-- Example card 3 -->
+      <div class="prompt-card">
+        <div class="prompt-card-header">
+          <div class="dot"></div>
+          <span>Example Prompt 3</span>
+        </div>
+        <div class="prompt-card-body">
+          <span class="label">Prompt</span>
+          <p class="prompt-text">Add your third prompt example here.</p>
+          <span class="label">Why it works</span>
+          <p class="notes">Add your analysis and observations here.</p>
+        </div>
+      </div>
 
-            <p>My academic background, with a Master’s in Applied Statistics and a dual Bachelor’s in American Studies and Computer Science, provides me with a multifaceted understanding of how data intersects with social issues. This expertise is complemented by hands-on experience in developing solutions that enhance data integrity, project efficiency, and organizational effectiveness.</p>
-            
-            <p>Certified as both a Rape Crisis and Domestic Violence Counselor, I am deeply committed to using data science to promote equity and justice. I seek opportunities to collaborate with organizations and professionals who are passionate about leveraging technology to improve lives and strengthen communities.</p>
-            
-            <p>If you are interested in making data work for social good, I invite you to connect with me on LinkedIn and explore how we can make a positive impact together.</p>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <div class="skills-column">
-                    <h3>Tools & Technologies</h3>
-                    <div class="skills-list">
-                        <span class="skill">Python</span>
-                        <span class="skill">Pandas</span>
-                        <span class="skill">PySpark</span>
-                        <span class="skill">Polars</span>
-                        <span class="skill">scikit-learn </span>
-                        <span class="skill">statsmodel</span>
-                        <span class="skill">R</span>
-                        <span class="skill">SQL</span>
-                        <span class="skill">Java</span>
-                        <span class="skill">Full-Stack Web Development</span>
-                        <span class="skill">Software Engineering Lifecycle</span>
-                        <span class="skill">AWS Sagemaker</span>
-                        <span class="skill">PowerBI</span>
-                        <span class="skill">Airflow</span>
-                        
-                    </div>
-                </div>
-                <div class="skills-column">
-                    <h3>Statistical Analysis & Data Science</h3>
-                    <div class="skills-list">
-                        <span class="skill">Machine Learning Engineering</span>
-                        <span class="skill">Big Data</span>
-                        <span class="skill">Generalized Linear Modelling</span>
-                        <span class="skill">Multi-Level Modelling</span>
-                        <span class="skill">Data Visualization & Translation</span>
-                        <span class="skill">Bayesian Regression and Analysis</span>
-                        <span class="skill">Causal Inference</span>
-                        <span class="skill">Multivariate Analysis</span>
-                        <span class="skill">Data Engineering</span>
-                        <span class="skill">Dimensional Modeling</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+    </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project">
-                    <a href="https://github.com/jessica-spencer/Gavi-Vaccination-Coverage-Causal-Analysis" target="_blank" class="project-link-wrapper" aria-label="View Gavi Vaccination Impacts: A Propensity Score Study project">
-                        <img src="images/gavi_small_logo.png?height=200&width=300" alt="Gavi Vaccination Impact Study" class="project-image">
-                        <div class="project-content">
-                            <h3>Gavi Vaccination Impacts: A Propensity Score Study</h3>
-                            <div class="project-tags">
-                                <span class="project-tag">R</span>
-                                <span class="project-tag">Causal Inference</span>
-                                <span class="project-tag">Propensity Score Matching</span>
-                            </div>
-                            <p>Causal analysis of the Global Alliance for Vaccines and Immunisation using a doubly-robust propensity score design. Analyzed the impact on mortality rates in countries with less than $1000 gross net income.</p>
-                        </div>
-                        
-                    </a>
-                </div>
-                
-                <div class="project">
-                    <a href="https://github.com/jessica-spencer/Open-Data-Projects/blob/main/Volunteering_(and_Pet_Ownership)_in_Edmonton_Canada.ipynb"  target="_blank" class="project-link-wrapper" aria-label="View Unicorn Companies SQL Analysis project">
-                        <img src="images/silly_sybil.jpeg?width=200&height=200" alt="Volunteering and Pet Ownership?" class="project-image">
-                        <div class="project-content">
-                            <h3>Volunteering and Pet Ownership? </h3>
-                            <div class="project-tags">
-                                <span class="project-tag">Python</span>
-                                <span class="project-tag">Data Cleaning</span>
-                                <span class="project-tag">Missingness Analysis</span>
-                                <span class="project-tag">Data Visualization</span>
-                                <span class="project-tag">Logistic Regression</span>
-                                <span class="project-tag">Prediction</span>
-                            </div>
-                        
-                            <p>I analyzed a dataset from Edmonton on demographics, pet ownership, and volunteering. While higher education had a small positive link to volunteering, pet ownership did not relate to volunteering, and the model had limited explanatory power.</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="project">
-                    <a href="https://github.com/jessica-spencer/Open-Data-Projects/blob/main/Contraceptives%20and%20Age/Contr.pdf"  target="_blank" class="project-link-wrapper" aria-label="View Contraception on Age Project pdf on github">
-                        <img src="images/contraception_pic.png?height=200&width=300" alt="Contraception and Age picture" class="project-image">
-                        <div class="project-content">
-                            <h3>Increasing Contraceptive Choice: Exploring Effective Intervensions in Indonesia</h3>
-                            <div class="project-tags">
-                                <span class="project-tag">R</span>
-                                <span class="project-tag">Impact Analysis</span>
-                                <span class="project-tag">Multiple Logistic Regression</span>
-                                <span class="project-tag">Prediction</span>
-                                
-                            </div>
-                            <p>Contraceptives are a transformative tool for health and life opportunities for those capable of pregnancy. 
-                                In this analysis, I investigate interventions to increase contraceptive use, and find that education increases contraceptive use, specifically long term, across ages. </p>
-                             </div>
-                        
-                    </a>
-                </div>
+    <!-- ── SECTION 2: TRY THE MODEL ── -->
+    <section id="model">
+      <span class="section-label">Section 2</span>
+      <h2 class="section-title">Try it in the Model</h2>
+      <p class="model-intro">
+        Interact with tiny-anya directly below. You can also open it in a new tab for a full-screen experience.
+      </p>
 
-                <div class="project">
-                    <a href="https://github.com/jessica-spencer/Open-Data-Projects/tree/main/Time%20Series%20Analysis%20of%20Construction%20in%20the%20US"  target="_blank" class="project-link-wrapper" aria-label="View Time Series Causal Analysis project">
-                        <img src="images/time_Series.png?height=200&width=300" alt="Time Series Causal Analysis" class="project-image">
-                        <div class="project-content">
-                            <h3>Time Series Causal Analysis</h3>
-                            <div class="project-tags">
-                                <span class="project-tag">Python</span>
-                                <span class="project-tag">Time Series Analysis</span>
-                                <span class="project-tag">Granger Causality</span>
-                            </div>
-                            <p>Conducted Granger causality analysis on the relationship between residential construction costs and number of households in the US over time, revealing a strong correlation between the two factors.</p>                  
-                        </div>
-                        
-                    </a>
-                </div>
+      <div class="model-actions">
+        <a href="https://huggingface.co/spaces/CohereLabs/tiny-aya" target="_blank" rel="noopener" class="btn-primary">
+          <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Open in full screen
+        </a>
+        <span class="btn-note">Opens on Hugging Face Spaces ↗</span>
+      </div>
 
+      <div class="iframe-wrapper">
+        <div class="iframe-bar">
+          <div class="circle c1"></div>
+          <div class="circle c2"></div>
+          <div class="circle c3"></div>
+          <span class="url">huggingface.co/spaces/CohereLabs/tiny-aya</span>
+        </div>
+        <iframe
+          src="https://coherelabs-tiny-aya.hf.space"
+          title="tiny-aya model interface"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope"
+          loading="lazy">
+          Your browser does not support iframes. Please use the link above to access the model.
+        </iframe>
+      </div>
+    </section>
 
-                <div class="project">
-                    <a href="https://www.datacamp.com/datalab/w/0afea4f1-f164-4a8a-936a-13acc2288263/edit"  target="_blank" class="project-link-wrapper" aria-label="View Unicorn Companies SQL Analysis project">
-                        <img src="images/unicorn_graphic.jpg?height=200&width=300" alt="Unicorn Companies SQL Analysis" class="project-image">
-                        <div class="project-content">
-                            <h3>Unicorn Companies: SQL Analysis</h3>
-                            <div class="project-tags">
-                                <span class="project-tag">SQL</span>
-                                <span class="project-tag">Data Analysis</span>
-                            </div>
-                        
-                            <p>In this project, I produced PostgreSQL to understand which industries are producing the highest valuations and the rate at which new high-value companies are emerging.</p>
-                        
-                        </div>
-                    </a>
-                </div>
+    <!-- ── SECTION 3: EVALUATION ── -->
+    <section id="evaluation">
+      <span class="section-label">Section 3</span>
+      <h2 class="section-title">Evaluation Examples</h2>
+      <p class="eval-intro">
+        Evaluation here goes beyond standard metrics — it considers whether model outputs align with social work ethics, reflect the diversity of languages and communities in the training data, and hold up to practitioner review. Add your own findings below.
+      </p>
 
-                
-                <div class="project">
-                    <a href="https://github.com/jessica-spencer/Mindfulness-Survey-Design"  target="_blank" class="project-link-wrapper" aria-label="View Unicorn Companies SQL Analysis project">
-                        <img src="images/pexels_student_mindfulness.jpg?width=200&height=200" alt="Volunteering and Pet Ownership?" class="project-image">
-                        <div class="project-content">
-                            <h3>Surveying Mindfulness Techniques in NYC Education</h3>
-                            <div class="project-tags">
-                                <span class="project-tag">Survey Design</span>
-                                <span class="project-tag">Survey Administration Research</span>
-                                <span class="project-tag">Literature Review</span>
-                                <span class="project-tag">Qualitative Analysis</span>
-                               
-                            </div>
-                            <p>As part of my master's degree, I designed a survey to study the effects of mindfulness intervention programs on students in New York City schools across different racial, gender, and socio-economic backgrounds.</p>
-                        </div>
-                    </a>
-                </div>
+      <div class="eval-grid">
 
-                <div class="project">
-                    <a href="https://www.kaggle.com/code/uwu1234/modular-data-load-class-for-starter-notebook-gpu?scriptVersionId=205256699"  target="_blank" class="project-link-wrapper" aria-label="View Unicorn Companies SQL Analysis project">
-                        <img src="images/child_mind.png?width=200&height=200" alt="Physical Activity to Problematic Internet Use" class="project-image">
-                        <div class="project-content">
-                            <h3>Relating Physical Activity to Problematic Internet Use</h3>
-                            <div class="project-tags">
-                                <span class="project-tag">Multi Class Classification</span>
-                                <span class="project-tag">Time Series Analysis</span>
-                                <span class="project-tag">NVIDIA cuDF GPU DataFrame</span>
-                               
-                            </div>
-                            <p>In this Kaggle competition hosted by the Child Mind Institute, the goal is to develop a predictive model that analyzes children's physical activity and fitness data to identify early signs of problematic internet use. In my first submission, I improved the data load step by making it  modular. </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
+        <div class="eval-card">
+          <p class="metric">Evaluation Dimension 1</p>
+          <h3>Language & Tone</h3>
+          <p>How well does the model maintain non-judgmental, strengths-based language across different prompt types? Add your findings here.</p>
+        </div>
 
-        <section id="education">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>Masters of Science in Applied Statistics for Social Science Research</h3>
-                <p>New York University, 2018-2020</p>
-                <p>Advanced quantitative research techniques applied to critical policy issues across social, behavioral, and health sciences.</p>
-                <div class="coursework">
-                    <h4>Relevant Coursework:</h4>
-                    <ul>
-                        <li>Bayesian Regression and Analysis</li>
-                        <li>Causal Inference</li>
-                        <li>Advanced Probability and Statistical Inference</li>
-                        <li>Data Ethics, Data Translation and Communication</li>
-                        <li>Data Visualization</li>
-                        <li>Discrete Choice Modelling</li>
-                        <li>Generalized Linear Models</li>
-                        <li>Machine Learning Engineering</li>
-                        <li>Messy Data Handling</li>
-                        <li>Multilevel Modelling</li>
-                        <li>Multivariate Analysis</li>
-                        <li>Survey Design and Administration</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="education-item">
-                <h3>BA in Computer Science and American Studies: Policy, and Society</h3>
-                <p>Connecticut College, 2013-2017</p>
-                <p>Graduated with Distinctions in Computer Science | Magna Cum Laude</p>
-                <div class="coursework">
-                    <h4>Relevant Coursework:</h4>
-                    <ul>
-                        <li>Theorizing Race, Ethnicity and Indigeneity</li>
-                        <li>Machine Learning Senior Seminar</li>
-                        <li>Globalization and the United States</li>
-                        <li>Data Structures and the Software Engineering Lifecycle</li>
-                        <li>Gender in US Politics</li>
-                        <li>Informatics</li>
-                        <li>United Nations Peacekeeping - Policy Evaluation</li>
-                        <li>Algorithms</li>
-                        <li>Colonization and Sexuality in Western Africa</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
+        <div class="eval-card">
+          <p class="metric">Evaluation Dimension 2</p>
+          <h3>Cultural Responsiveness</h3>
+          <p>Does the model's output shift appropriately across different cultural and linguistic contexts? Add your observations here.</p>
+        </div>
 
-    <footer>
-        <p>&copy; 2024 Jessica Spencer. All rights reserved.</p>
-    </footer>
+        <div class="eval-card">
+          <p class="metric">Evaluation Dimension 3</p>
+          <h3>Bias & Representation</h3>
+          <p>Which communities are better represented in outputs, and where do gaps or biases appear? Add your analysis here.</p>
+        </div>
+
+        <div class="eval-card">
+          <p class="metric">Evaluation Dimension 4</p>
+          <h3>Practitioner Review</h3>
+          <p>What did practitioners or peers say when reviewing model outputs? Add qualitative feedback here.</p>
+        </div>
+
+      </div>
+
+      <div class="eval-note">
+        <strong>A note on evaluation methodology:</strong> Add a paragraph here describing how you evaluated the model — what criteria you used, who reviewed outputs, and what you would do differently with more time or resources.
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    Built as part of an MSW capstone project &nbsp;·&nbsp;
+    Model: <a href="https://huggingface.co/spaces/CohereLabs/tiny-aya" target="_blank">tiny-aya by Cohere Labs</a>
+  </footer>
 
 </body>
 </html>
