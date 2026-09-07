@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Work Translation Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #F5F0E8;
+      --forest: #1A3A1A;
+      --moss: #5A8A3A;
+      --moss-light: #EAF2E3;
+      --ink: #2C2C2A;
+      --muted: #6B6B68;
+      --border: #D4CFC4;
+      --white: #FFFFFF;
+      --section-gap: 5rem;
+    }
+
+  /*html { scroll-behavior: smooth; }-->*/
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--forest);
+      color: var(--cream);
+      padding: 3rem 2rem 2.5rem;
+      text-align: center;
+    }
+
+    header .eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #97BC62;
+      margin-bottom: 0.75rem;
+      font-weight: 500;
+    }
+
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.2rem, 6vw, 3.5rem);
+      line-height: 1.15;
+      color: var(--cream);
+      margin-bottom: 1rem;
+    }
+
+    header h1 em {
+      font-style: italic;
+      color: #97BC62;
+    }
+
+    header p {
+      max-width: 560px;
+      margin: 0 auto;
+      color: #B8C4A8;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    /* ── NAV DOTS ── */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1.5rem 2rem;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--moss);
+      border-bottom-color: var(--moss);
+    }
+
+    /* ── MAIN LAYOUT ── */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ── SECTION SHARED ── */
+    section {
+      padding: var(--section-gap) 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type { border-bottom: none; }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--moss);
+      background: var(--moss-light);
+      padding: 0.3rem 0.75rem;
+      border-radius: 2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      color: var(--forest);
+      margin-bottom: 1.5rem;
+      line-height: 1.25;
+    }
+
+    /* ── PROMPT ENGINEERING SECTION ── */
+    .prompt-intro {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      max-width: 640px;
+    }
+
+    .prompt-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 1.25rem;
+      overflow: hidden;
+    }
+
+    .prompt-card-header {
+      background: var(--forest);
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .prompt-card-header .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #97BC62;
+    }
+
+    .prompt-card-header span {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #B8C4A8;
+      letter-spacing: 0.05em;
+    }
+
+    .prompt-card-body {
+      padding: 1.25rem;
+    }
+
+    .prompt-card-body p {
+      font-size: 0.95rem;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .prompt-card-body .label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--moss);
+      margin-bottom: 0.35rem;
+      display: block;
+    }
+
+    .prompt-card-body .prompt-text {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--forest);
+      background: var(--moss-light);
+      border-left: 3px solid var(--moss);
+      padding: 0.75rem 1rem;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 1rem;
+    }
+
+    .prompt-card-body .notes {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    /* ── MODEL SECTION ── */
+    .model-intro {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 1.75rem;
+      max-width: 600px;
+    }
+
+    .model-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--forest);
+      color: var(--cream);
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover {
+      background: var(--moss);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary svg {
+      width: 14px; height: 14px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+    }
+
+    .btn-note {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .iframe-wrapper {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 4px 24px rgba(26,58,26,0.07);
+    }
+
+    .iframe-bar {
+      background: var(--forest);
+      padding: 0.6rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .iframe-bar .circle {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+    }
+
+    .iframe-bar .c1 { background: #FF6058; }
+    .iframe-bar .c2 { background: #FFBD2E; }
+    .iframe-bar .c3 { background: #28CA42; }
+
+    .iframe-bar .url {
+      margin-left: 0.5rem;
+      font-size: 0.75rem;
+      color: #B8C4A8;
+      font-weight: 300;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+
+    @media (max-width: 600px) {
+      iframe { height: 480px; }
+    }
+
+    /* ── EVALUATION SECTION ── */
+    .eval-intro {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      max-width: 640px;
+    }
+
+    .eval-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .eval-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+
+    .eval-card .metric {
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--moss);
+      margin-bottom: 0.5rem;
+    }
+
+    .eval-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.05rem;
+      color: var(--forest);
+      margin-bottom: 0.5rem;
+    }
+
+    .eval-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .eval-note {
+      background: var(--moss-light);
+      border: 1px solid #C2D9B0;
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      font-size: 0.92rem;
+      color: var(--forest);
+    }
+
+    .eval-note strong { font-weight: 500; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    footer a {
+      color: var(--moss);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <p class="eyebrow">Specialized Translation Model for Social Work</p>
+    <h1>Our <em>Mockup</em></h1>
+    <p>Guided by humanist implementation and data justice principles, built to benefit communities and front line social workers.  </p>
+  </header>
+
+  <nav>
+    <a href="#prompts">Prompt Engineering</a>
+    <a href="#model">Try the Model</a>
+    <a href="#evaluation">Evaluation</a>
+    <a href="#community">Contribute Your Ideas!</a>
+  </nav>
+
+  <main>
+
+    <!-- ── SECTION 1: PROMPT ENGINEERING ── -->
+    <section id="prompts">
+      <span class="section-label">Section 1</span>
+      <h2 class="section-title">Prompt Engineering Examples</h2>
+      <p class="prompt-intro">
+        These prompts will guide the model's responses. Copy and paste into the model interface to test them out: "Try the Model"> scroll down to "Additional Inputs"> paste into "System Prompt"
+      </p>
+
+      <!-- Example card 1 -->
+      <div class="prompt-card">
+        <div class="prompt-card-header">
+          <div class="dot"></div>
+          <span>Example Prompt 1</span>
+        </div>
+        <div class="prompt-card-body">
+          <span class="label">Prompt</span>
+          <p class="prompt-text">You are a social work assistant. Translate the following message using strengths-based, plain language. Avoid deficit framing. </p>
+          <span class="label">Why it works</span>
+          <p class="notes">Explicitly naming the framework upfront ("strengths-based, plain language") shapes the model's register before it generates a response. </p>
+        </div>
+      </div>
+
+      <!-- Example card 2 -->
+      <div class="prompt-card">
+        <div class="prompt-card-header">
+          <div class="dot"></div>
+          <span>Example Prompt 2</span>
+        </div>
+        <div class="prompt-card-body">
+          <span class="label">Prompt</span>
+          <p class="prompt-text">Translate the following with fidelity, add an annotation for concepts that may need cultural context for an American social worker to understand</p>
+          <span class="label">Why it works</span>
+          <p class="notes">This prompt ensures that the model translates the text accurately while also providing additional context that may be necessary for a different cultural audience. </p>
+        </div>
+      </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-header">
+      <div class="dot"></div>
+      <span>Example Prompt 3</span>
+    </div>
+    <div class="prompt-card-body">
+      <span class="label">Prompt</span>
+      <p class="prompt-text">Contribute an Idea to the Community.</p>
+      <a href="https://goofy-november-dbe.notion.site/36a54859387b808c9680cdeee2b0516d?pvs=105"
+        target="_blank" rel="noopener" class="btn-primary"
+        style="display:inline-flex; margin-top: 1rem; font-size: 0.82rem; padding: 0.55rem 1rem;">
+        <svg viewBox="0 0 24 24" style="width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        Submit your own prompt idea
+      </a>
+    </div>
+  </div>
+
+
+    </section>
+
+    <!-- ── SECTION 2: TRY THE MODEL ── -->
+    <section id="model">
+      <span class="section-label">Section 2</span>
+      <h2 class="section-title">Try it in the Model</h2>
+      <p class="model-intro">
+        Interact with tiny-anya directly below. You can also open it in a new tab for a full-screen experience.
+      </p>
+
+      <div class="model-actions">
+        <a href="https://huggingface.co/spaces/CohereLabs/tiny-aya" target="_blank" rel="noopener" class="btn-primary">
+          <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Open in full screen
+        </a>
+        <span class="btn-note">Opens on Hugging Face Spaces ↗</span>
+      </div>
+
+      <div class="iframe-wrapper">
+        <div class="iframe-bar">
+          <div class="circle c1"></div>
+          <div class="circle c2"></div>
+          <div class="circle c3"></div>
+          <span class="url">huggingface.co/spaces/CohereLabs/tiny-aya</span>
+        </div>
+        <iframe
+          src="https://coherelabs-tiny-aya.hf.space"
+          title="tiny-aya model interface"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope"
+          loading="lazy">
+          Your browser does not support iframes. Please use the link above to access the model.
+        </iframe>
+      </div>
+    </section>
+
+    <!-- ── SECTION 3: EVALUATION ── -->
+    <section id="evaluation">
+      <span class="section-label">Section 3</span>
+      <h2 class="section-title">Evaluation Examples</h2>
+      <p class="eval-intro">
+        Evaluation will include AND go beyond standard metrics, and it's imperitive that practictioners and community members are involved in development of evaluation.
+      </p>
+
+      <div class="eval-grid">
+
+        <div class="eval-card">
+          <p class="metric">Potential Evaluation Dimension 1</p>
+          <h3>Meaning Preservation</h3>
+          <p>For each translation, does the model maintain the intended meaning across different languages and contexts? Can be Y/N, or a scale (1-5, for example) </p>
+        </div>
+
+        <div class="eval-card">
+          <p class="metric">Potential Evaluation Dimension 2</p>
+          <h3>Cultural Responsiveness</h3>
+          <p>For each translation, does the model adapt its output appropriately to the specified cultural and linguistic context? Can be Y/N, or a scale (1-5, for example) </p>
+        </div>
+
+        <div class="eval-card">
+          <p class="metric">Potential Evaluation Dimension 3</p>
+          <h3>Bias & Representation</h3>
+          <p>For each translation, is there an identifiable bias in the output? </p>
+        </div>
+
+        <div class="eval-card">
+          <p class="metric">Potential Evaluation Dimension 4</p>
+          <h3>Practitioner Notes of Interest and Concern</h3>
+          <p>What observations or concerns did practitioners or peers raise when reviewing model outputs? Can be free text, that is then categorized and analyzed so it can be used to inform future improvements.</p>
+        </div>
+
+        <div class="eval-card">
+          <p class="metric">Contribute a Community Evaluation Criterion</p>
+          <p>Add to our list of ideas below.</p>
+          <a href="https://goofy-november-dbe.notion.site/36a54859387b808c9680cdeee2b0516d?pvs=105" target="_blank" rel="noopener" class="btn-primary">
+          <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          Submit an idea
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+<!-- ── SECTION 4: COMMUNITY IDEAS ── -->
+    <section id="community">
+      <span class="section-label">Section 4</span>
+      <h2 class="section-title">Community Ideas</h2>
+      <p class="eval-intro">
+        Have a prompt idea or evaluation criterion to suggest? Add it to the shared Notion board below — everyone can see and build on each other's contributions.
+      </p>
+
+      <div class="model-actions">
+        <a href="https://goofy-november-dbe.notion.site/36a54859387b808c9680cdeee2b0516d?pvs=105" target="_blank" rel="noopener" class="btn-primary">
+          <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          Submit an idea
+        </a>
+        <a href="https://www.notion.so/25b54859387b80318c20cf677fcb3ba2?v=25b54859387b80cf862b000c20f7b20c&source=copy_link" target="_blank" rel="noopener" class="btn-primary" style="background: var(--moss);">
+          <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          View all ideas
+        </a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    Authors: Jessica Spencer, Hannah Landes, Rajan Singh; &nbsp; Cohere Labs, and the social work practitioners who contributed prompts and feedback. <br />
+    Model: <a href="https://huggingface.co/spaces/CohereLabs/tiny-aya" target="_blank">tiny-aya by Cohere Labs</a>
+  </footer>
+
+</body>
+</html>
