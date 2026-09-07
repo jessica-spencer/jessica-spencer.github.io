@@ -1,6 +1,6 @@
-Standin for reads solves writeup
 ---
-layout: default
+layout: page
+sidebar_link: true
 title: Evaluating Reads + Solves
 description: Evaluating a citywide literacy and mathematics initiative through longitudinal student and implementation data.
 ---

@@ -1,0 +1,27 @@
+title: Jessica Spencer
+description: Data science · Statistics · Software · Social impact
+url: "https://jessica-spencer.github.io"
+baseurl: ""
+
+author:
+  name: Jessica Spencer
+  email: jesspencer3@gmail.com
+
+remote_theme: fongandrew/hydeout
+
+markdown: kramdown
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Hyde options
+hyde_sidebar_home_link: true
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - readme.md
+  - vendor
+  - .github

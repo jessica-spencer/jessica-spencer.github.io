@@ -9,3 +9,7 @@ conda activate
 then followed directions on installation:
 gem install bundler jekyll
 etc. see https://jekyllrb.com/
+bundle install
+bundle exec jekyll serve
+
+ATER THIS I learned that jekyll is native to github rip

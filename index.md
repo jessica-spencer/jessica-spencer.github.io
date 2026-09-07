@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: page
+sidebar_link: true
+sidebar_sort_order: 1
 title: About
 description: Jessica Spencer — people, systems, data
 ---
