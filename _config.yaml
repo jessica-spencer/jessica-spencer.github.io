@@ -1,0 +1,8 @@
+title: Jessica Spencer
+description: Data science · Statistics · Software · Social impact
+url: ""
+
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
