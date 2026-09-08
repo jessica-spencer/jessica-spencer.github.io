@@ -84,6 +84,7 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-gist (1.5.0)
       octokit (~> 4.2)
+    jekyll-paginate (1.1.0)
     jekyll-remote-theme (0.5.2)
       addressable (~> 2.0)
       jekyll (>= 3.5, < 5.0)
@@ -193,6 +194,7 @@ DEPENDENCIES
   jekyll (~> 4.4)
   jekyll-feed
   jekyll-gist
+  jekyll-paginate
   jekyll-remote-theme
   jekyll-seo-tag
   webrick (~> 1.8)
